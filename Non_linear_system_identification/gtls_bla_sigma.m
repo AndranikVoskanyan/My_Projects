@@ -1,0 +1,148 @@
+function [best_a, best_b, best_GBLA, best_na, best_nb, best_cost] = ...
+         gtls_bla_sigma(G, sigma_G2, na_max, nb_max, w_exc, fs)
+
+
+G     = G(:);
+w_exc = w_exc(:);
+K     = length(G);
+
+if nargin < 2 || isempty(sigma_G2)
+    sigma_G2 = ones(K,1);
+else
+    sigma_G2 = real(sigma_G2(:));
+    if numel(sigma_G2) == 1
+        sigma_G2 = sigma_G2 * ones(K,1);
+    end
+end
+
+if length(sigma_G2) ~= K
+    error('sigma_G2 must be length K (same as G).');
+end
+
+sigma_G2 = max(sigma_G2, 1e-30);
+
+Ts   = 1/fs;
+zinv = exp(-1j*w_exc*Ts);
+
+best_cost  = inf;
+best_theta = [];
+best_na    = 0;
+best_nb    = 0;
+
+for nb_cur = 1:nb_max
+    for na_cur = nb_cur:na_max
+
+        Z_den = zeros(K, na_cur+1);
+        for i = 0:na_cur
+            Z_den(:, i+1) = zinv.^i;
+        end
+
+        Z_num = zeros(K, nb_cur);
+        for j = 0:nb_cur-1
+            Z_num(:, j+1) = zinv.^j;
+        end
+
+        Phi_c = [ (G .* Z_den), (-Z_num) ];
+        L     = size(Phi_c,2);
+
+        Phi = [real(Phi_c); imag(Phi_c)];    
+        Cphi_c = zeros(L,L);
+        for k = 1:K
+            v = [ (zinv(k).^(0:na_cur)), zeros(1,nb_cur) ];  
+            Cphi_c = Cphi_c + sigma_G2(k) * (v') * v;        
+        end
+
+
+        Cphi_c = Cphi_c / K;
+
+        Cphi = real((Cphi_c + Cphi_c')/2);                  
+
+        reg = 1e-12 * trace(Cphi)/max(1,L);
+        if ~(isfinite(reg) && reg > 0), reg = 1e-12; end
+        Cphi = Cphi + reg*eye(L);
+
+        [V,D] = eig(Cphi);
+        d = real(diag(D)); d(d<0)=0;
+        C = V*diag(sqrt(d))*V';                             
+
+        try
+            [~,~,X,Cg,Sg] = gsvd(Phi, C);
+        catch
+            continue;
+        end
+
+        c = diag(Cg);  s = diag(Sg);
+        ratio = inf(size(c));
+        ok = abs(s) > 0;
+        ratio(ok) = abs(c(ok))./abs(s(ok));
+
+        [~, idx] = min(ratio);
+        e = zeros(length(ratio),1); e(idx)=1;
+
+        theta = (X') \ e;      
+        theta = real(theta);
+
+     
+        a_part = theta(1:na_cur+1);
+        b_part = theta(na_cur+2 : na_cur+1+nb_cur);
+
+        a0 = a_part(1);
+        if abs(a0) > 1e-12
+            a_part = a_part / a0;
+            b_part = b_part / a0;
+            theta  = [a_part; b_part];
+        end
+
+        A = zeros(K,1);
+        for i = 0:na_cur
+            A = A + a_part(i+1) * (zinv.^i);
+        end
+
+        B = zeros(K,1);
+        for j = 0:nb_cur-1
+            B = B + b_part(j+1) * (zinv.^j);
+        end
+
+        if any(abs(A) < 1e-14)
+            continue;
+        end
+
+        G_model = B ./ A;
+        err     = G - G_model;
+
+        Jw   = sum( (abs(err).^2) ./ sigma_G2 );
+        Jw_K = Jw / K;
+        Jw   = 2*(na_cur+nb_cur) + K*log(Jw_K);
+
+        if isfinite(Jw) && (Jw < best_cost)
+            best_cost  = Jw;
+            best_theta = theta;
+            best_na    = na_cur;
+            best_nb    = nb_cur;
+        end
+    end
+end
+
+if isempty(best_theta)
+    error('GTLS: no valid model found (check orders / sigma_G2).');
+end
+
+a_part = best_theta(1:best_na+1);
+b_part = best_theta(best_na+2 : best_na+1+best_nb);
+
+best_a = a_part.';
+best_b = b_part.';
+
+A = zeros(K,1);
+for i = 0:best_na
+    A = A + a_part(i+1) * (zinv.^i);
+end
+
+B = zeros(K,1);
+for j = 0:best_nb-1
+    B = B + b_part(j+1) * (zinv.^j);
+end
+
+best_GBLA = B ./ A;
+
+end
