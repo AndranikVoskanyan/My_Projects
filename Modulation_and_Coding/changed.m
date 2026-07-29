@@ -1,8 +1,8 @@
 clear all;close all; clc;
 %% ------------------- Parameters ------------------- %%
-for time_shift = 20:10:20                           % Time shift (samples)
+for time_shift = 20:20:20                           % Time shift (samples)
 clearvars -except time_shift 
-for ppm = [2 4 8]
+for ppm = [2]
 
 Ns = 1000;
 
