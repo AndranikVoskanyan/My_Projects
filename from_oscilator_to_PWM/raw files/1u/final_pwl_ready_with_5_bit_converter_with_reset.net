@@ -1,0 +1,110 @@
+* D:\year1\sem2\sensors\Labs\CMOS\project\working file_backup\files_for_submmition\final_pwl_ready_with_5_bit_converter_with_reset.asc
+V2 VDD 0 3.3 Rser=0
+M21 N031 Rect_signal 0 0 NMOS l=0.35u w=0.4u
+M22 VDD Rect_signal N031 VDD PMOS l=0.35u w=0.8u
+M23 N032 N031 0 0 NMOS l=1.05u w=1.2u
+M24 VDD N031 N032 VDD PMOS l=1.05u w=2.4u
+M25 N033 N032 0 0 NMOS l=3.15u w=3.6u
+M26 VDD N032 N033 VDD PMOS l=3.15u w=7.2u
+C4 N032 0 500f
+C5 N031 0 500f
+C6 N033 0 500f
+M27 N029 N033 0_detector VDD PMOS l=0.35u w=0.8u
+M28 VDD Rect_signal N029 VDD PMOS l=0.35u w=0.8u
+M29 0_detector N033 0 0 NMOS l=0.35u w=0.4u
+M30 0_detector Rect_signal 0 0 NMOS l=0.35u w=0.4u
+M32 VDD p_bit_mirror sawtooth VDD PMOS l=2u w=80u
+C7 sawtooth N035 1f
+C8 sawtooth 0 3.4p
+M31 sawtooth 0_detector 0 0 NMOS l=0.35u w=15u
+M37 N035 Current_source 0 0 NMOS l=2u w=40u
+V1 VDD_control 0 PWL(30u 0 31u 1 50u 1 51u 2 70u 2 71u 3)
+M38 VDD N027 N028 VDD PMOS l=0.35u w=2.8u
+M39 VDD N027 N027 VDD PMOS l=0.35u w=2.8u
+M40 N028 VDD_control N034 0 NMOS l=0.35u w=1.4u
+M41 N027 sawtooth N034 0 NMOS l=0.35u w=1.4u
+M34 N036 N036 0 0 NMOS l=0.35u w=1.4u
+R3 VDD N036 10k
+M33 N034 N036 0 0 NMOS l=0.35u w=3u
+M44 VDD N028 N030 VDD PMOS l=0.35u w=2.8u
+M45 N030 N036 0 0 NMOS l=0.35u w=1.4u
+M42 PWL_output N030 0 0 NMOS l=0.35u w=1u
+M43 VDD N030 PWL_output VDD PMOS l=0.35u w=2.4u
+V6 bit_1 0 0 Rser=10k
+V7 bit_2 0 0 Rser=10k
+V3 bit_3 0 0 Rser=10k
+V4 bit_4 0 0 Rser=10k
+V5 bit_5 0 0 Rser=10k
+I2 Mirror_bits Current_source {Iref}
+R4 Mirror_bits Current_source 10G
+M46 p_bit_mirror Mirror_bits N009 VDD PMOS l=0.5u w=11.5u
+M47 p_bit_mirror Mirror_bits Mirror_bits VDD PMOS l=0.5u w=2u
+M48 N015 bit_5 0 0 NMOS l=0.35u w=1u
+M49 VDD bit_5 N015 VDD PMOS l=0.35u w=2.4u
+M50 N009 N015 Current_source VDD PMOS l=0.5u w=22.4u
+M51 p_bit_mirror Mirror_bits N010 VDD PMOS l=0.5u w=6.1u
+M52 N016 bit_4 0 0 NMOS l=0.35u w=1u
+M53 VDD bit_4 N016 VDD PMOS l=0.35u w=2.4u
+M54 N010 N016 Current_source VDD PMOS l=0.5u w=11.2u
+M55 p_bit_mirror Mirror_bits N011 VDD PMOS l=0.5u w=3.1u
+M56 N017 bit_3 0 0 NMOS l=0.35u w=1u
+M57 VDD bit_3 N017 VDD PMOS l=0.35u w=2.4u
+M58 N011 N017 Current_source VDD PMOS l=0.5u w=5.6u
+M59 p_bit_mirror Mirror_bits N012 VDD PMOS l=0.5u w=1.6u
+M60 N018 bit_2 0 0 NMOS l=0.35u w=1u
+M61 VDD bit_2 N018 VDD PMOS l=0.35u w=2.4u
+M62 N012 N018 Current_source VDD PMOS l=0.5u w=2.8u
+M63 p_bit_mirror Mirror_bits N013 VDD PMOS l=0.5u w=1u
+M64 N019 bit_1 0 0 NMOS l=0.35u w=1u
+M65 VDD bit_1 N019 VDD PMOS l=0.35u w=2.4u
+M66 N013 N019 Current_source VDD PMOS l=0.5u w=1.4u
+M67 Current_source Current_source 0 0 NMOS l=0.35u w=1.4u
+M8 N006 N005 N021 0 NMOS l=0.35u w=1u
+M9 N002 N005 N006 VDD PMOS l=0.35u w=2.4u
+M10 N007 N006 N022 0 NMOS l=0.35u w=1u
+M15 N001 N006 N007 VDD PMOS l=0.35u w=2.4u
+M16 N005 N007 N023 0 NMOS l=0.35u w=1u
+M68 N003 N007 N005 VDD PMOS l=0.35u w=2.4u
+M69 N021 Current_source 0 0 NMOS l=0.35u w=1.4u
+M70 N020 Current_source 0 0 NMOS l=0.35u w=1.4u
+M71 VDD p_bit_mirror N002 VDD PMOS l=0.35u w=2.8u
+M72 VDD p_bit_mirror N020 VDD PMOS l=0.35u w=2.8u
+M73 VDD p_bit_mirror N001 VDD PMOS l=0.35u w=6u
+M74 VDD p_bit_mirror N003 VDD PMOS l=0.35u w=6u
+M75 N022 Current_source 0 0 NMOS l=0.35u w=1.8u
+M76 N023 Current_source 0 0 NMOS l=0.35u w=1.8u
+M77 N014 N005 N025 0 NMOS l=0.35u w=1u
+M78 N008 N005 N014 VDD PMOS l=0.35u w=2.4u
+M79 VDD N004 N008 VDD PMOS l=0.35u w=2.8u
+M80 VDD N004 N004 VDD PMOS l=0.35u w=2.8u
+M81 N025 N024 0 0 NMOS l=0.35u w=1.4u
+M82 N024 N024 0 0 NMOS l=0.35u w=1.4u
+R5 N004 N024 10k
+M83 Rect_signal N014 0 0 NMOS l=0.35u w=1u
+M84 VDD N014 Rect_signal VDD PMOS l=0.35u w=2.4u
+C9 N006 0 300f
+C10 N007 0 220f
+C11 N005 0 200f
+M1 VDD p_bit_mirror p_bit_mirror VDD PMOS l=0.35u w=2.8u
+M2 VDD PWL_output N037 VDD PMOS l=0.35u w=2.8u
+M3 N037 N036 0 0 NMOS l=0.35u w=1.4u
+V8 RESET 0 3.3 Rser=0
+M5 N026 RESET 0 0 NMOS l=0.35u w=1u
+M6 VDD RESET N026 VDD PMOS l=0.35u w=2.4u
+M4 N005 N026 0 0 NMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\Juuzo\AppData\Local\LTspice\lib\cmp\standard.mos
+.inc library.mod
+.param Iref=1u
+.tran 40u
+* detect falling edge of rectangular wave
+* make Sawtooth wave
+* XOR
+* PWL by using camparaotr
+* 5-bit Digital-to-frequency converter
+* comparator
+* make rectangular wave from oscilator
+* For implementing main core  make V3-V7 0v V8 3.3v and add <.step param Iref list 1u 2u 4u 8u 16u 32u\nand check:\n Rect_signal node for rectangular signal \n Sawtooth node for sawtooth signal\n PWL_output for PWL signal \nyou can also chec bit converter part by changing v3_v7 voltage source values from 0 to 3.3 by implementing 5bit binar value \neach represents sum(2^n)+2 n activated bits\n \nSystem also can be reseted by Reset V8 making low
+.backanno
+.end
