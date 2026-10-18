@@ -1,0 +1,9 @@
+MO button_sync NULL button_sync.v vlg70/button__sync.bin 1790681894
+MO contorl_fsm NULL contorl_fsm.v vlg5A/contorl__fsm.bin 1790681894
+MO debounce NULL debounce.v vlg1D/debounce.bin 1790681894
+MO counter NULL counter.v vlg10/counter.bin 1790632626
+MO tick_generator NULL tick_generator.v vlg71/tick__generator.bin 1790681894
+MO led_pattern NULL led_pattern.v vlg5E/led__pattern.bin 1790681894
+MO step_counter NULL step_counter.v vlg27/step__counter.bin 1790681894
+MO everything NULL everything.v vlg29/everything.bin 1790681894
+MO edge_detector NULL edge_detector.v vlg52/edge__detector.bin 1790681894

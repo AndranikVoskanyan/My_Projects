@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">p0x0_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mul_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;p0x0_12&gt; &lt;p0x0_13&gt; &lt;p0x0_14&gt; &lt;p0x0_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">p2x2_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mul_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;p2x2_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">p3x3_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mul_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;p3x3_12&gt; &lt;p3x3_13&gt; &lt;p3x3_14&gt; &lt;p3x3_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">p1x1_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mul_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;p1x1_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">accum_val_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">accum_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;accum_val_11&gt; &lt;accum_val_12&gt; &lt;accum_val_13&gt; &lt;accum_val_14&gt; &lt;accum_val_15&gt; &lt;accum_val_16&gt; &lt;accum_val_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">mul_inst/Mmult_x1[7]_GND_3_o_MuLt_2_OUT</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">accum_inst/accum_val_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fir_filter_top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;accum_inst/accum_val_11&gt; &lt;accum_inst/accum_val_12&gt; &lt;accum_inst/accum_val_13&gt; &lt;accum_inst/accum_val_14&gt; &lt;accum_inst/accum_val_15&gt; &lt;accum_inst/accum_val_16&gt; &lt;accum_inst/accum_val_17&gt; </arg>
+</msg>
+
+</messages>
+

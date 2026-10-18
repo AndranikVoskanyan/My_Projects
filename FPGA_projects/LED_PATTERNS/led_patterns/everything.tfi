@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+everything instance_name (
+    .clk(clk), 
+    .reset_n(reset_n), 
+    .button(button), 
+    .led(led)
+    );
+
+

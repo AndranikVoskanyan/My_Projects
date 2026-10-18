@@ -1,0 +1,15 @@
+NET "clk" LOC = "P55";
+
+
+NET "led[0]" LOC = "P79";    # LED1
+NET "led[1]" LOC = "P78";    # LED2
+NET "led[2]" LOC = "P75";    # LED3
+NET "led[3]" LOC = "P74";    # LED4
+NET "led[4]" LOC = "P67";    # LED5
+NET "led[5]" LOC = "P66";    # LED6
+NET "led[6]" LOC = "P62";    # LED7
+NET "led[7]" LOC = "P61";    # LED8
+
+
+NET "reset_n" LOC = "P40";
+NET "button" LOC = "P41";

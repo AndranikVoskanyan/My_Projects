@@ -1,0 +1,36 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/Desktop/LED_PATTERNS/led_patterns/everything_tb_isim_beh.exe -prj /home/ise/Desktop/LED_PATTERNS/led_patterns/everything_tb_beh.prj work.everything_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 6
+Turning on mult-threading, number of parallel sub-compilation jobs: 12 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/step_counter.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/led_pattern.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/edge_detector.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/contorl_fsm.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/button_sync.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94936 KB
+Fuse CPU Usage: 410 ms
+Compiling module button_sync
+Compiling module debounce(COUNT_MAX=4,COUNTER_BIT...
+Compiling module edge_detector
+Compiling module contorl_fsm
+Compiling module tick_generator(COUNT_MAX=10,COUN...
+Compiling module step_counter
+Compiling module led_pattern
+Compiling module everything
+Compiling module everything_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 10 Verilog Units
+Built simulation executable /home/ise/Desktop/LED_PATTERNS/led_patterns/everything_tb_isim_beh.exe
+Fuse Memory Usage: 915264 KB
+Fuse CPU Usage: 630 ms
+GCC CPU Usage: 600 ms

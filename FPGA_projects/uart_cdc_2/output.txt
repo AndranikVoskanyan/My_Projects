@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+16M
+FF
+Untitled
+/home/ise/Desktop/uart_cdc_2/
+
+MCS
+No

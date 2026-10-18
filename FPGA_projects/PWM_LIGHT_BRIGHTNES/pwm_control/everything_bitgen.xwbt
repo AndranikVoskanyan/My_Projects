@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything.ncd
+OUTFILE=/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

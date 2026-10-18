@@ -1,0 +1,6 @@
+verilog work "fir_delay_line.v"
+verilog work "coef_mul.v"
+verilog work "accum_stage.v"
+verilog work "fir_filter_top.v"
+verilog work "fir_top_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/ise/Desktop/uart_cdc_2//Untitled -s 2048 -u 0000 /home/ise/Desktop/uart_cdc_2/everything2.bit -spi 
+
+PROM /home/ise/Desktop/uart_cdc_2/Untitled.prm map: Sat Oct  3 18:15:22 2026
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          2048K
+PROM start    0000:0000
+PROM end      001f:ffff
+PROM checksum 1abcdc1a
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:327b     Oct  3 18:12:43 2026 /home/ise/Desktop/uart_cdc_2/everything2.bit

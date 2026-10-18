@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            10/ 3/2026 - 18:15
+SOURCE          /home/ise/Desktop/uart_cdc_2/Untitled.mcs
+DEVICE          2048K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x1ABCDC1A
+START_ADDRESS   0x00000000 END_ADDRESS 0x0005327B DIRECTION_UP   "/home/ise/Desktop/uart_cdc_2/everything2.bit" 6slx9tqg144

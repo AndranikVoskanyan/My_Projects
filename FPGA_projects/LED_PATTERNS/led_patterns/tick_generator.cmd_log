@@ -1,0 +1,29 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+par -w -intstyle ise -ol high -t 1 tick_generator_map.ncd tick_generator.ncd tick_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tick_generator.twx tick_generator.ncd -o tick_generator.twr tick_generator.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+par -w -intstyle ise -ol high -t 1 tick_generator_map.ncd tick_generator.ncd tick_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tick_generator.twx tick_generator.ncd -o tick_generator.twr tick_generator.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+par -w -intstyle ise -ol high -t 1 tick_generator_map.ncd tick_generator.ncd tick_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tick_generator.twx tick_generator.ncd -o tick_generator.twr tick_generator.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/tick_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+par -w -intstyle ise -ol high -t 1 tick_generator_map.ncd tick_generator.ncd tick_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tick_generator.twx tick_generator.ncd -o tick_generator.twr tick_generator.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 tick_generator.ngc tick_generator.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o tick_generator_map.ncd tick_generator.ngd tick_generator.pcf 
+par -w -intstyle ise -ol high -t 1 tick_generator_map.ncd tick_generator.ncd tick_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tick_generator.twx tick_generator.ncd -o tick_generator.twr tick_generator.pcf 

@@ -1,0 +1,33 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything_tb_isim_beh.exe -prj /home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything_tb_beh.prj work.everything_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 6
+Turning on mult-threading, number of parallel sub-compilation jobs: 12 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/edge_detector.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/debounce.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/button_sync.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/pwm_generator.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/button_control.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/brightness_control.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything.v" into library work
+Analyzing Verilog file "/home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94924 KB
+Fuse CPU Usage: 380 ms
+Compiling module button_sync
+Compiling module debounce(COUNT_MAX=4,COUNTER_BIT...
+Compiling module edge_detector
+Compiling module button_control(COUNT_MAX=4,COUNT...
+Compiling module brightness_control(PWM_WIDTH=8,S...
+Compiling module pwm_generator(PWM_WIDTH=8)
+Compiling module everything(COUNT_MAX=4,COUNTER_B...
+Compiling module everything_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 9 Verilog Units
+Built simulation executable /home/ise/Desktop/PWM_LIGHT_BRIGHTNES/pwm_control/everything_tb_isim_beh.exe
+Fuse Memory Usage: 915300 KB
+Fuse CPU Usage: 550 ms
+GCC CPU Usage: 230 ms

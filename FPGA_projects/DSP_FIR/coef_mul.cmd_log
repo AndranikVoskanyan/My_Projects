@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/DSP_FIR/coef_mul.xst" -ofn "/home/ise/Desktop/DSP_FIR/coef_mul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 coef_mul.ngc coef_mul.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o coef_mul_map.ncd coef_mul.ngd coef_mul.pcf 
+par -w -intstyle ise -ol high -mt off coef_mul_map.ncd coef_mul.ncd coef_mul.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml coef_mul.twx coef_mul.ncd -o coef_mul.twr coef_mul.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/DSP_FIR/coef_mul.xst" -ofn "/home/ise/Desktop/DSP_FIR/coef_mul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 coef_mul.ngc coef_mul.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o coef_mul_map.ncd coef_mul.ngd coef_mul.pcf 
+par -w -intstyle ise -ol high -mt off coef_mul_map.ncd coef_mul.ncd coef_mul.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml coef_mul.twx coef_mul.ncd -o coef_mul.twr coef_mul.pcf 

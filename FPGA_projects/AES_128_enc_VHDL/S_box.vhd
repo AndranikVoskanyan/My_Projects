@@ -1,0 +1,317 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity S_box is
+    Port ( 
+           clk      : in std_logic;
+           rst      : in std_logic;
+           start    : in std_logic;
+           data_in  : in std_logic_vector (127 downto 0)  ;
+           data_out : out std_logic_vector (127 downto 0) ;        
+           done     : out std_logic;
+           ready    : out std_logic
+          
+           );
+           
+end S_box;
+
+architecture Behavioral of S_box is
+ type MyArrayType is array (0 to 3 , 0 to 3) of std_logic_vector(7 downto 0);
+signal data_in_mat,data_out_mat : MyArrayType := (others =>(others =>(others => '0')));
+ 
+begin
+ 
+	process(clk,rst) is
+	begin
+	   for i in 0 to 3 loop
+	       for j in 0 to 3 loop
+	           data_in_mat(j,i) <= data_in(127-(i*32 + j*8) downto 127-(i*32 + j*8)-7);
+	       end loop;
+	   end loop;
+	  if rst = '1' then
+	       data_in_mat <= (others =>(others =>(others => '0')));
+	       data_out_mat <= (others =>(others =>(others => '0')));
+	       ready <= '0';
+
+	  elsif rising_edge(clk) then
+	       
+
+           for i in 0 to 3 loop
+            for j in 0 to 3 loop
+            case data_in_mat(i,j)is
+               
+                when x"00" => data_out_mat(i,j)<= x"63";
+                when x"01" => data_out_mat(i,j)<= x"7c";
+                when x"02" => data_out_mat(i,j)<= x"77";
+                when x"03" => data_out_mat(i,j)<= x"7b";
+                when x"04" => data_out_mat(i,j)<= x"f2";
+                when x"05" => data_out_mat(i,j)<= x"6b";
+                when x"06" => data_out_mat(i,j)<= x"6f";
+                when x"07" => data_out_mat(i,j)<= x"c5";
+                when x"08" => data_out_mat(i,j)<= x"30";
+                when x"09" => data_out_mat(i,j)<= x"01";
+                when x"0a" => data_out_mat(i,j)<= x"67";
+                when x"0b" => data_out_mat(i,j)<= x"2b";
+                when x"0c" => data_out_mat(i,j)<= x"fe";
+                when x"0d" => data_out_mat(i,j)<= x"d7";
+                when x"0e" => data_out_mat(i,j)<= x"ab";
+                when x"0f" => data_out_mat(i,j)<= x"76";
+                when x"10" => data_out_mat(i,j)<= x"ca";
+                when x"11" => data_out_mat(i,j)<= x"82";
+                when x"12" => data_out_mat(i,j)<= x"c9";
+                when x"13" => data_out_mat(i,j)<= x"7d";
+                when x"14" => data_out_mat(i,j)<= x"fa";
+                when x"15" => data_out_mat(i,j)<= x"59";
+                when x"16" => data_out_mat(i,j)<= x"47";
+                when x"17" => data_out_mat(i,j)<= x"f0";
+                when x"18" => data_out_mat(i,j)<= x"ad";
+                when x"19" => data_out_mat(i,j)<= x"d4";
+                when x"1a" => data_out_mat(i,j)<= x"a2";
+                when x"1b" => data_out_mat(i,j)<= x"af";
+                when x"1c" => data_out_mat(i,j)<= x"9c";
+                when x"1d" => data_out_mat(i,j)<= x"a4";
+                when x"1e" => data_out_mat(i,j)<= x"72";
+                when x"1f" => data_out_mat(i,j)<= x"c0";
+                when x"20" => data_out_mat(i,j)<= x"b7";
+                when x"21" => data_out_mat(i,j)<= x"fd";
+                when x"22" => data_out_mat(i,j)<= x"93";
+                when x"23" => data_out_mat(i,j)<= x"26";
+                when x"24" => data_out_mat(i,j)<= x"36";
+                when x"25" => data_out_mat(i,j)<= x"3f";
+                when x"26" => data_out_mat(i,j)<= x"f7";
+                when x"27" => data_out_mat(i,j)<= x"cc";
+                when x"28" => data_out_mat(i,j)<= x"34";
+                when x"29" => data_out_mat(i,j)<= x"a5";
+                when x"2a" => data_out_mat(i,j)<= x"e5";
+                when x"2b" => data_out_mat(i,j)<= x"f1";
+                when x"2c" => data_out_mat(i,j)<= x"71";
+                when x"2d" => data_out_mat(i,j)<= x"d8";
+                when x"2e" => data_out_mat(i,j)<= x"31";
+                when x"2f" => data_out_mat(i,j)<= x"15";
+                when x"30" => data_out_mat(i,j)<= x"04";
+                when x"31" => data_out_mat(i,j)<= x"c7";
+                when x"32" => data_out_mat(i,j)<= x"23";
+                when x"33" => data_out_mat(i,j)<= x"c3";
+                when x"34" => data_out_mat(i,j)<= x"18";
+                when x"35" => data_out_mat(i,j)<= x"96";
+                when x"36" => data_out_mat(i,j)<= x"05";
+                when x"37" => data_out_mat(i,j)<= x"9a";
+                when x"38" => data_out_mat(i,j)<= x"07";
+                when x"39" => data_out_mat(i,j)<= x"12";
+                when x"3a" => data_out_mat(i,j)<= x"80";
+                when x"3b" => data_out_mat(i,j)<= x"e2";
+                when x"3c" => data_out_mat(i,j)<= x"eb";
+                when x"3d" => data_out_mat(i,j)<= x"27";
+                when x"3e" => data_out_mat(i,j)<= x"b2";
+                when x"3f" => data_out_mat(i,j)<= x"75";
+                when x"40" => data_out_mat(i,j)<= x"09";
+                when x"41" => data_out_mat(i,j)<= x"83";
+                when x"42" => data_out_mat(i,j)<= x"2c";
+                when x"43" => data_out_mat(i,j)<= x"1a";
+                when x"44" => data_out_mat(i,j)<= x"1b";
+                when x"45" => data_out_mat(i,j)<= x"6e";
+                when x"46" => data_out_mat(i,j)<= x"5a";
+                when x"47" => data_out_mat(i,j)<= x"a0";
+                when x"48" => data_out_mat(i,j)<= x"52";
+                when x"49" => data_out_mat(i,j)<= x"3b";
+                when x"4a" => data_out_mat(i,j)<= x"d6";
+                when x"4b" => data_out_mat(i,j)<= x"b3";
+                when x"4c" => data_out_mat(i,j)<= x"29";
+                when x"4d" => data_out_mat(i,j)<= x"e3";
+                when x"4e" => data_out_mat(i,j)<= x"2f";
+                when x"4f" => data_out_mat(i,j)<= x"84";
+                when x"50" => data_out_mat(i,j)<= x"53";
+                when x"51" => data_out_mat(i,j)<= x"d1";
+                when x"52" => data_out_mat(i,j)<= x"00";
+                when x"53" => data_out_mat(i,j)<= x"ed";
+                when x"54" => data_out_mat(i,j)<= x"20";
+                when x"55" => data_out_mat(i,j)<= x"fc";
+                when x"56" => data_out_mat(i,j)<= x"b1";
+                when x"57" => data_out_mat(i,j)<= x"5b";
+                when x"58" => data_out_mat(i,j)<= x"6a";
+                when x"59" => data_out_mat(i,j)<= x"cb";
+                when x"5a" => data_out_mat(i,j)<= x"be";
+                when x"5b" => data_out_mat(i,j)<= x"39";
+                when x"5c" => data_out_mat(i,j)<= x"4a";
+                when x"5d" => data_out_mat(i,j)<= x"4c";
+                when x"5e" => data_out_mat(i,j)<= x"58";
+                when x"5f" => data_out_mat(i,j)<= x"cf";
+                when x"60" => data_out_mat(i,j)<= x"d0";
+                when x"61" => data_out_mat(i,j)<= x"ef";
+                when x"62" => data_out_mat(i,j)<= x"aa";
+                when x"63" => data_out_mat(i,j)<= x"fb";
+                when x"64" => data_out_mat(i,j)<= x"43";
+                when x"65" => data_out_mat(i,j)<= x"4d";
+                when x"66" => data_out_mat(i,j)<= x"33";
+                when x"67" => data_out_mat(i,j)<= x"85";
+                when x"68" => data_out_mat(i,j)<= x"45";
+                when x"69" => data_out_mat(i,j)<= x"f9";
+                when x"6a" => data_out_mat(i,j)<= x"02";
+                when x"6b" => data_out_mat(i,j)<= x"7f";
+                when x"6c" => data_out_mat(i,j)<= x"50";
+                when x"6d" => data_out_mat(i,j)<= x"3c";
+                when x"6e" => data_out_mat(i,j)<= x"9f";
+                when x"6f" => data_out_mat(i,j)<= x"a8";
+                when x"70" => data_out_mat(i,j)<= x"51";
+                when x"71" => data_out_mat(i,j)<= x"a3";
+                when x"72" => data_out_mat(i,j)<= x"40";
+                when x"73" => data_out_mat(i,j)<= x"8f";
+                when x"74" => data_out_mat(i,j)<= x"92";
+                when x"75" => data_out_mat(i,j)<= x"9d";
+                when x"76" => data_out_mat(i,j)<= x"38";
+                when x"77" => data_out_mat(i,j)<= x"f5";
+                when x"78" => data_out_mat(i,j)<= x"bc";
+                when x"79" => data_out_mat(i,j)<= x"b6";
+                when x"7a" => data_out_mat(i,j)<= x"da";
+                when x"7b" => data_out_mat(i,j)<= x"21";
+                when x"7c" => data_out_mat(i,j)<= x"10";
+                when x"7d" => data_out_mat(i,j)<= x"ff";
+                when x"7e" => data_out_mat(i,j)<= x"f3";
+                when x"7f" => data_out_mat(i,j)<= x"d2";
+                when x"80" => data_out_mat(i,j)<= x"cd";
+                when x"81" => data_out_mat(i,j)<= x"0c";
+                when x"82" => data_out_mat(i,j)<= x"13";
+                when x"83" => data_out_mat(i,j)<= x"ec";
+                when x"84" => data_out_mat(i,j)<= x"5f";
+                when x"85" => data_out_mat(i,j)<= x"97";
+                when x"86" => data_out_mat(i,j)<= x"44";
+                when x"87" => data_out_mat(i,j)<= x"17";
+                when x"88" => data_out_mat(i,j)<= x"c4";
+                when x"89" => data_out_mat(i,j)<= x"a7";
+                when x"8a" => data_out_mat(i,j)<= x"7e";
+                when x"8b" => data_out_mat(i,j)<= x"3d";
+                when x"8c" => data_out_mat(i,j)<= x"64";
+                when x"8d" => data_out_mat(i,j)<= x"5d";
+                when x"8e" => data_out_mat(i,j)<= x"19";
+                when x"8f" => data_out_mat(i,j)<= x"73";
+                when x"90" => data_out_mat(i,j)<= x"60";
+                when x"91" => data_out_mat(i,j)<= x"81";
+                when x"92" => data_out_mat(i,j)<= x"4f";
+                when x"93" => data_out_mat(i,j)<= x"dc";
+                when x"94" => data_out_mat(i,j)<= x"22";
+                when x"95" => data_out_mat(i,j)<= x"2a";
+                when x"96" => data_out_mat(i,j)<= x"90";
+                when x"97" => data_out_mat(i,j)<= x"88";
+                when x"98" => data_out_mat(i,j)<= x"46";
+                when x"99" => data_out_mat(i,j)<= x"ee";
+                when x"9a" => data_out_mat(i,j)<= x"b8";
+                when x"9b" => data_out_mat(i,j)<= x"14";
+                when x"9c" => data_out_mat(i,j)<= x"de";
+                when x"9d" => data_out_mat(i,j)<= x"5e";
+                when x"9e" => data_out_mat(i,j)<= x"0b";
+                when x"9f" => data_out_mat(i,j)<= x"db";
+                when x"a0" => data_out_mat(i,j)<= x"e0";
+                when x"a1" => data_out_mat(i,j)<= x"32";
+                when x"a2" => data_out_mat(i,j)<= x"3a";
+                when x"a3" => data_out_mat(i,j)<= x"0a";
+                when x"a4" => data_out_mat(i,j)<= x"49";
+                when x"a5" => data_out_mat(i,j)<= x"06";
+                when x"a6" => data_out_mat(i,j)<= x"24";
+                when x"a7" => data_out_mat(i,j)<= x"5c";
+                when x"a8" => data_out_mat(i,j)<= x"c2";
+                when x"a9" => data_out_mat(i,j)<= x"d3";
+                when x"aa" => data_out_mat(i,j)<= x"ac";
+                when x"ab" => data_out_mat(i,j)<= x"62";
+                when x"ac" => data_out_mat(i,j)<= x"91";
+                when x"ad" => data_out_mat(i,j)<= x"95";
+                when x"ae" => data_out_mat(i,j)<= x"e4";
+                when x"af" => data_out_mat(i,j)<= x"79";
+                when x"b0" => data_out_mat(i,j)<= x"e7";
+                when x"b1" => data_out_mat(i,j)<= x"c8";
+                when x"b2" => data_out_mat(i,j)<= x"37";
+                when x"b3" => data_out_mat(i,j)<= x"6d";
+                when x"b4" => data_out_mat(i,j)<= x"8d";
+                when x"b5" => data_out_mat(i,j)<= x"d5";
+                when x"b6" => data_out_mat(i,j)<= x"4e";
+                when x"b7" => data_out_mat(i,j)<= x"a9";
+                when x"b8" => data_out_mat(i,j)<= x"6c";
+                when x"b9" => data_out_mat(i,j)<= x"56";
+                when x"ba" => data_out_mat(i,j)<= x"f4";
+                when x"bb" => data_out_mat(i,j)<= x"ea";
+                when x"bc" => data_out_mat(i,j)<= x"65";
+                when x"bd" => data_out_mat(i,j)<= x"7a";
+                when x"be" => data_out_mat(i,j)<= x"ae";
+                when x"bf" => data_out_mat(i,j)<= x"08";
+                when x"c0" => data_out_mat(i,j)<= x"ba";
+                when x"c1" => data_out_mat(i,j)<= x"78";
+                when x"c2" => data_out_mat(i,j)<= x"25";
+                when x"c3" => data_out_mat(i,j)<= x"2e";
+                when x"c4" => data_out_mat(i,j)<= x"1c";
+                when x"c5" => data_out_mat(i,j)<= x"a6";
+                when x"c6" => data_out_mat(i,j)<= x"b4";
+                when x"c7" => data_out_mat(i,j)<= x"c6";
+                when x"c8" => data_out_mat(i,j)<= x"e8";
+                when x"c9" => data_out_mat(i,j)<= x"dd";
+                when x"ca" => data_out_mat(i,j)<= x"74";
+                when x"cb" => data_out_mat(i,j)<= x"1f";
+                when x"cc" => data_out_mat(i,j)<= x"4b";
+                when x"cd" => data_out_mat(i,j)<= x"bd";
+                when x"ce" => data_out_mat(i,j)<= x"8b";
+                when x"cf" => data_out_mat(i,j)<= x"8a";
+                when x"d0" => data_out_mat(i,j)<= x"70";
+                when x"d1" => data_out_mat(i,j)<= x"3e";
+                when x"d2" => data_out_mat(i,j)<= x"b5";
+                when x"d3" => data_out_mat(i,j)<= x"66";
+                when x"d4" => data_out_mat(i,j)<= x"48";
+                when x"d5" => data_out_mat(i,j)<= x"03";
+                when x"d6" => data_out_mat(i,j)<= x"f6";
+                when x"d7" => data_out_mat(i,j)<= x"0e";
+                when x"d8" => data_out_mat(i,j)<= x"61";
+                when x"d9" => data_out_mat(i,j)<= x"35";
+                when x"da" => data_out_mat(i,j)<= x"57";
+                when x"db" => data_out_mat(i,j)<= x"b9";
+                when x"dc" => data_out_mat(i,j)<= x"86";
+                when x"dd" => data_out_mat(i,j)<= x"c1";
+                when x"de" => data_out_mat(i,j)<= x"1d";
+                when x"df" => data_out_mat(i,j)<= x"9e";
+                when x"e0" => data_out_mat(i,j)<= x"e1";
+                when x"e1" => data_out_mat(i,j)<= x"f8";
+                when x"e2" => data_out_mat(i,j)<= x"98";
+                when x"e3" => data_out_mat(i,j)<= x"11";
+                when x"e4" => data_out_mat(i,j)<= x"69";
+                when x"e5" => data_out_mat(i,j)<= x"d9";
+                when x"e6" => data_out_mat(i,j)<= x"8e";
+                when x"e7" => data_out_mat(i,j)<= x"94";
+                when x"e8" => data_out_mat(i,j)<= x"9b";
+                when x"e9" => data_out_mat(i,j)<= x"1e";
+                when x"ea" => data_out_mat(i,j)<= x"87";
+                when x"eb" => data_out_mat(i,j)<= x"e9";
+                when x"ec" => data_out_mat(i,j)<= x"ce";
+                when x"ed" => data_out_mat(i,j)<= x"55";
+                when x"ee" => data_out_mat(i,j)<= x"28";
+                when x"ef" => data_out_mat(i,j)<= x"df";
+                when x"f0" => data_out_mat(i,j)<= x"8c";
+                when x"f1" => data_out_mat(i,j)<= x"a1";
+                when x"f2" => data_out_mat(i,j)<= x"89";
+                when x"f3" => data_out_mat(i,j)<= x"0d";
+                when x"f4" => data_out_mat(i,j)<= x"bf";
+                when x"f5" => data_out_mat(i,j)<= x"e6";
+                when x"f6" => data_out_mat(i,j)<= x"42";
+                when x"f7" => data_out_mat(i,j)<= x"68";
+                when x"f8" => data_out_mat(i,j)<= x"41";
+                when x"f9" => data_out_mat(i,j)<= x"99";
+                when x"fa" => data_out_mat(i,j)<= x"2d";
+                when x"fb" => data_out_mat(i,j)<= x"0f";
+                when x"fc" => data_out_mat(i,j)<= x"b0";
+                when x"fd" => data_out_mat(i,j)<= x"54";
+                when x"fe" => data_out_mat(i,j)<= x"bb";
+                when x"ff" => data_out_mat(i,j)<= x"16";
+                when others =>data_out_mat(i,j) <= x"00";
+            end case;
+           end loop;
+          end loop;
+          if  start = '1' then   
+              ready <= '0';
+              data_out <=  data_out_mat(0, 0) & data_out_mat(1, 0) & data_out_mat(2, 0) & data_out_mat(3, 0) & 
+                           data_out_mat(0, 1) & data_out_mat(1, 1) & data_out_mat(2, 1) & data_out_mat(3, 1) & 
+                           data_out_mat(0, 2) & data_out_mat(1, 2) & data_out_mat(2, 2) & data_out_mat(3, 2) & 
+                           data_out_mat(0, 3) & data_out_mat(1, 3) & data_out_mat(2, 3) & data_out_mat(3, 3);                 
+              done <= '1';
+         elsif (start = '0' ) then
+              ready <= '1';
+              done <= '0';
+         end if;
+	end if;
+	end process;
+end Behavioral;

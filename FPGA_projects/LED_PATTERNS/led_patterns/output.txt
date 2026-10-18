@@ -1,0 +1,23 @@
+Storage Target: SPI Flash Single FPGA
+16M
+FF
+spi
+/home/ise/Desktop
+
+MCS
+No
+_PATTERNS/led_patterns/
+
+MCS
+No
+NS/led_patterns/
+
+MCS
+x8
+No
+patterns/
+
+MCS
+Yes
+1
+No

@@ -1,0 +1,33 @@
+NET "clk" LOC = "P55" ;
+
+NET "reset_in" LOC = "P40" ;
+NET "write_button" LOC = "P41";
+NET "check_button" LOC = "P43";
+
+NET "uart_line_tx" LOC = "P111" ;
+NET "uart_line_rx" LOC = "P112" ;
+
+NET "led[0]" LOC = "P79" ;
+NET "led[1]" LOC = "P78" ;
+NET "led[2]" LOC = "P75" ;
+NET "led[3]" LOC = "P74" ;
+NET "led[4]" LOC = "P67" ;
+NET "led[5]" LOC = "P66" ;
+NET "led[6]" LOC = "P62" ;
+NET "led[7]" LOC = "P61" ;
+
+#K1 P40 ───────────── reset
+#K2 P41 ───────────── send next test byte
+#
+#P111 ─ UART TX ─┐
+#                │ jumper
+#P112 ─ UART RX ◄┘
+#
+#LED1 P79 ─ PASS
+#LED2 P78 ─ ERROR
+#LED3 P75 ─ TX FIFO full
+#LED4 P74 ─ TX FIFO empty
+#LED5 P67 ─ TX busy
+#LED6 P66 ─ RX FIFO full
+#LED7 P62 ─ RX FIFO empty
+#LED8 P61 ─ clock locked

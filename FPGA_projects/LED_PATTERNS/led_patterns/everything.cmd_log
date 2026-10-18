@@ -1,0 +1,49 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 everything.ngc everything.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o everything_map.ncd everything.ngd everything.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 everything.ngc everything.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -t 1 everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 everything.ngc everything.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -t 1 everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 everything.ngc everything.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -t 1 everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 everything.ngc everything.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -t 1 everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+bitgen -intstyle ise -f everything.ut everything.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 everything.ngc everything.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -mt off everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+vhdtdtfi -lang verilog -prj led_patterns -o /home/ise/Desktop/LED_PATTERNS/led_patterns/everything.tfi -lib work /home/ise/Desktop/LED_PATTERNS/led_patterns//everything.v -module everything -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 everything.ngc everything.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -mt off everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc6slx9-tqg144-2 everything.ngc everything.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -mt off everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f everything.ut everything.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc6slx9-tqg144-2 everything.ngc everything.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o everything_map.ncd everything.ngd everything.pcf 
+par -w -intstyle ise -ol high -mt off everything_map.ncd everything.ncd everything.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml everything.twx everything.ncd -o everything.twr everything.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f everything.ut everything.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/everything.syr" 

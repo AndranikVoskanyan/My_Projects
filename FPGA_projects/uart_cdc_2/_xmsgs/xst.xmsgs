@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/Desktop/uart_cdc_2/ipcore_dir/clk_div.v" Line 133: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/Desktop/uart_cdc_2/everything2.v" Line 156: Assignment to <arg fmt="%s" index="1">falling_edge</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/Desktop/uart_cdc_2/everything2.v" Line 181: Assignment to <arg fmt="%s" index="1">ch_falling_edge</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/Desktop/uart_cdc_2/everything2.v</arg>&quot; line <arg fmt="%s" index="2">151</arg>: Output port &lt;<arg fmt="%s" index="3">falling_edge</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u_edge_detector</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/Desktop/uart_cdc_2/everything2.v</arg>&quot; line <arg fmt="%s" index="2">176</arg>: Output port &lt;<arg fmt="%s" index="3">falling_edge</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ch_edge_detector</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_mem</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_check_index[2]_GND_1_o_wide_mux_16_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_pattern_data</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ch_edge_detector/falling_edge_detection</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">everything2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">u_edge_detector/falling_edge_detection</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">everything2</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">rd_gray_pointer_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">async_fifo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rd_pointer_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">wr_gray_pointer_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">async_fifo</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;wr_pointer_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pattern_index_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">everything2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;TX_FIFO/wr_pointer_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pattern_index_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">everything2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;TX_FIFO/wr_pointer_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pattern_index_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">everything2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;TX_FIFO/wr_pointer_2&gt; </arg>
+</msg>
+
+</messages>
+

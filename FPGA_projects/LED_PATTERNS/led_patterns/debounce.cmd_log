@@ -1,0 +1,77 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.xst" -ofn "/home/ise/Desktop/LED_PATTERNS/led_patterns/debounce.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm edge_detector.bmm -p xc3sd3400a-fg676-4 debounce.ngc debounce.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o debounce_map.ncd debounce.ngd debounce.pcf 
+par -w -intstyle ise -ol high -t 1 debounce_map.ncd debounce.ncd debounce.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debounce.twx debounce.ncd -o debounce.twr debounce.pcf 

@@ -1,0 +1,7 @@
+verilog work "edge_detector.v"
+verilog work "debounce.v"
+verilog work "button_sync.v"
+verilog work "pwm_generator.v"
+verilog work "button_control.v"
+verilog work "brightness_control.v"
+verilog work "everything.v"

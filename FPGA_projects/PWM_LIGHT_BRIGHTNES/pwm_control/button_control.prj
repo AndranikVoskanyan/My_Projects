@@ -1,0 +1,4 @@
+verilog work "edge_detector.v"
+verilog work "debounce.v"
+verilog work "button_sync.v"
+verilog work "button_control.v"

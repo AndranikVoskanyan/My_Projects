@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/Desktop/DSP_FIR/fir_top_tb_isim_beh.exe" -prj "/home/ise/Desktop/DSP_FIR/fir_top_tb_beh.prj" "work.fir_top_tb" "work.glbl" 

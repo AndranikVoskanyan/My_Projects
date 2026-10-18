@@ -1,0 +1,42 @@
+INFO:sim:172 - Generating IP...
+Resolving generics for 'clk_div'...
+Applying external generics to 'clk_div'...
+Delivering associated files for 'clk_div'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'clk_div'...
+Delivered 3 files into directory
+/home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div
+Delivered 1 file into directory
+/home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+/opt/Xilinx/14.7/ISE_DS/ISE/.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'clk_div'...
+Generating ISE project...
+XCO file found: clk_div.xco
+XMDF file found: clk_div_xmdf.tcl
+Adding /home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div.asy -view all
+-origin_type imported
+Adding /home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div.ucf -view all
+-origin_type created
+Adding /home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div.v -view all
+-origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "/home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding /home/ise/Desktop/uart_cdc_2/ipcore_dir/tmp/_cg/clk_div.veo -view all
+-origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/clk_div"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'clk_div'.
