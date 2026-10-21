@@ -11,7 +11,7 @@ Four of the projects target a Xilinx **Spartan-6 XC6SLX9** (TQG144 package) and 
 | [`LED_PATTERNS`](#4-led_patterns--button-controlled-led-patterns) | Verilog | Button-selectable LED animations | Synchronizer, debounce, edge detection, FSM, parameterised modules |
 | [`PWM_LIGHT_BRIGHTNES`](#5-pwm_light_brightnes--pwm-led-dimmer) | Verilog | LED dimmer with up/down buttons | PWM, saturating counter, reuse of the button chain |
 | [`uart_cdc_2`](#6-uart_cdc_2--uart-link-with-clock-domain-crossing) | Verilog | UART TX/RX with async FIFOs and a self-checking loopback | Clock domain crossing, Gray-code FIFO, UART, on-chip clocking IP |
-| [`RISC_V`](#7-risc_v--risc-v-processor-project) | — | RISC-V processor design project | RISC-V instruction set architecture, processor design |
+| [`RISC_V`](#7-risc_v--risc-v-processor-project) | Verilog | RISC-V processor design project | RISC-V instruction set architecture, processor design |
 > The four Xilinx ISE project folders also contain files generated during synthesis, place & route and simulation (`.ncd`, `.ngc`, `.bit`, `.wdb`, logs and so on). The relevant design files are the `.v` sources, testbenches (`*_tb.v`) and `pinout.ucf`.
 
 ---
