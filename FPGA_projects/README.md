@@ -2,7 +2,7 @@
 
 Digital design projects written in VHDL and Verilog. They range from a basic LED pattern generator to a UART link that crosses clock domains, an AES-128 encryption core, and a RISC-V processor project.
 
-Four of the projects target a Xilinx **Spartan-6 XC6SLX9** (TQG144 package) and are built with **Xilinx ISE** (ISim for simulation). Each of them contains an ISE project file (`.xise`) and a pin constraints file (`pinout.ucf`). The two AES projects contain VHDL sources only.
+Five of the projects target a Xilinx **Spartan-6 XC6SLX9** (TQG144 package) and are built with **Xilinx ISE** (ISim for simulation). Each of them contains an ISE project file (`.xise`) and a pin constraints file (`pinout.ucf`). The two AES projects contain VHDL sources only.
 | Folder | Language | What it is | Main concepts |
 |---|---|---|---|
 | [`AES_128_enc_VHDL`](#1-aes-128-encryption--sequential-version) | VHDL | AES-128 encryption, sequential FSM version | FSM, S-box, ShiftRows, MixColumns, key expansion, 7-segment display |
@@ -11,8 +11,8 @@ Four of the projects target a Xilinx **Spartan-6 XC6SLX9** (TQG144 package) and 
 | [`LED_PATTERNS`](#4-led_patterns--button-controlled-led-patterns) | Verilog | Button-selectable LED animations | Synchronizer, debounce, edge detection, FSM, parameterised modules |
 | [`PWM_LIGHT_BRIGHTNES`](#5-pwm_light_brightnes--pwm-led-dimmer) | Verilog | LED dimmer with up/down buttons | PWM, saturating counter, reuse of the button chain |
 | [`uart_cdc_2`](#6-uart_cdc_2--uart-link-with-clock-domain-crossing) | Verilog | UART TX/RX with async FIFOs and a self-checking loopback | Clock domain crossing, Gray-code FIFO, UART, on-chip clocking IP |
-| [`RISC_V`](#7-risc_v--risc-v-processor-project) | Verilog | RISC-V processor design project | RISC-V instruction set architecture, processor design |
-> The four Xilinx ISE project folders also contain files generated during synthesis, place & route and simulation (`.ncd`, `.ngc`, `.bit`, `.wdb`, logs and so on). The relevant design files are the `.v` sources, testbenches (`*_tb.v`) and `pinout.ucf`.
+| [`RISC_V`](#7-risc_v--5-stage-rv32i-processor) | Verilog | 32-bit pipelined RISC-V CPU with FPGA demo | RV32I, 5-stage pipeline, forwarding, hazards, branches, load/store unit |
+> The five Xilinx ISE project folders also contain files generated during synthesis, place & route and simulation (`.ncd`, `.ngc`, `.bit`, `.wdb`, logs and so on). The relevant design files are the `.v` sources, testbenches (`*_tb.v`) and `pinout.ucf`.
 
 ---
 ## 1. AES_128_enc_VHDL — sequential version
@@ -130,17 +130,26 @@ check button ─► [25 MHz] checker FSM ◄─ RX async FIFO ◄─ [10 MHz] ua
 - **Simulation:** `uart_tx_tb.v` covers the transmitter.
 
 ---
-## 7. RISC_V — RISC-V processor project
+## 7. RISC_V — 5-stage RV32I processor
 
-A processor design project exploring the **RISC-V instruction set architecture** and its implementation in digital hardware.
+A **32-bit RISC-V CPU** implemented in Verilog for the Xilinx **Spartan-6 XC6SLX9**, with a classic five-stage pipeline: **Instruction Fetch (IF) → Decode (ID) → Execute (EX) → Memory (MEM) → Writeback (WB)**.
 
-- **Focus:** RISC-V architecture and processor design.
-- **Project files:** available in the [`RISC_V`](RISC_V/) folder.
-- **Implementation details:** refer to the source files for the actual architecture, supported instructions and verification setup.
+**How it works**
+
+- **`riscv_cpu.v`** integrates the CPU datapath and four pipeline registers (`if_id_register`, `id_ex_register`, `ex_mem_register`, `mem_wb_register`).
+- **`control_unit.v`**, **`instruction_decoder.v`**, **`immediate_generator.v`** and **`register_file.v`** handle instruction decoding, immediate formats and 32 general-purpose registers (`x0` is always zero).
+- **`alu.v`** performs arithmetic, logical operations, shifts and signed/unsigned comparisons. **`branch_pc.v`** handles conditional branches, JAL and JALR.
+- **Pipeline hazards:** EX/MEM and MEM/WB forwarding, a writeback-to-decode bypass, load-use stalls, and flushing on taken branches/jumps or exceptions.
+- **Memory:** `instruction_memmory.v` provides 4 KB of instruction memory initialized from `program.mem`. `data_memory.v` provides 4 KB of RAM mapped at `0x10000000`. The `lsu_store.v` unit handles byte/halfword/word loads and stores, sign extension, byte enables and alignment checks.
+- **Instruction support:** RV32I arithmetic/logic, branches, loads/stores, JAL/JALR, LUI, AUIPC and FENCE decoding, with ECALL/EBREAK detection. Exceptions currently halt the processor and report a cause/PC; a full CSR/trap controller is not yet implemented.
+
+**Board test (`riscv_top.v`):** START and RESET buttons pass through synchronizer, debounce and edge-detection logic. START runs the demo program in `program.mem`. Active-low LEDs indicate **RUNNING**, **DONE** (ECALL, cause 11), or **ERROR** (other halts); two more indicate the debounced button states. `pinout.ucf` defines the FPGA pin assignments.
+
+**Verification:** separate testbenches cover the ALU, control unit, program counter, instruction decoder/memory, register file, pipeline registers and load/store logic. The folder includes `RISC_V.xise` and the generated `riscv_top.bit`.
 
 ---
 ## Building
 
-For the four Spartan-6 projects, open the `.xise` file in Xilinx ISE (`DSP_FIR.xise`, `led_patterns.xise`, `pwm_control.xise` or `uart_cdc_2.xise`) and run Synthesize → Implement → Generate Programming File. `pinout.ucf` holds the pin assignments. For simulation, run the testbenches (`*_tb.v`) in ISim.
+For the five Spartan-6 projects, open the `.xise` file in Xilinx ISE (`DSP_FIR.xise`, `led_patterns.xise`, `pwm_control.xise`, `uart_cdc_2.xise` or `RISC_V.xise`) and run Synthesize → Implement → Generate Programming File. `pinout.ucf` holds the pin assignments. For simulation, run the testbenches (`*_tb.v`) in ISim.
 
 The AES folders contain VHDL sources only and can be added to any Xilinx or generic VHDL simulation project. The top entity is `encoder`.
