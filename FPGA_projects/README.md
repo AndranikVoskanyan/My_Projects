@@ -130,6 +130,7 @@ check button ─► [25 MHz] checker FSM ◄─ RX async FIFO ◄─ [10 MHz] ua
 - **Simulation:** `uart_tx_tb.v` covers the transmitter.
 
 ---
+
 ## 7. RISC_V — 5-stage RV32I processor
 
 A **32-bit RISC-V CPU** implemented in Verilog for the Xilinx **Spartan-6 XC6SLX9**, with a classic five-stage pipeline: **Instruction Fetch (IF) → Decode (ID) → Execute (EX) → Memory (MEM) → Writeback (WB)**.
@@ -146,6 +147,7 @@ A **32-bit RISC-V CPU** implemented in Verilog for the Xilinx **Spartan-6 XC6SLX
 **Board test (`riscv_top.v`):** START and RESET buttons pass through synchronizer, debounce and edge-detection logic. START runs the demo program in `program.mem`. Active-low LEDs indicate **RUNNING**, **DONE** (ECALL, cause 11), or **ERROR** (other halts); two more indicate the debounced button states. `pinout.ucf` defines the FPGA pin assignments.
 
 **Verification:** separate testbenches cover the ALU, control unit, program counter, instruction decoder/memory, register file, pipeline registers and load/store logic. The folder includes `RISC_V.xise` and the generated `riscv_top.bit`.
+
 
 ---
 ## Building
