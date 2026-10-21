@@ -1,0 +1,125 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml PC.twx PC.ncd -o PC.twr PC.pcf
+
+Design file:              PC.ncd
+Physical constraint file: PC.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+next_pc<0>  |    2.995(R)|      SLOW  |   -0.739(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<1>  |    4.424(R)|      SLOW  |   -1.812(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<2>  |    2.773(R)|      SLOW  |   -0.530(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<3>  |    4.406(R)|      SLOW  |   -1.801(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<4>  |    4.286(R)|      SLOW  |   -1.769(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<5>  |    4.906(R)|      SLOW  |   -2.106(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<6>  |    4.856(R)|      SLOW  |   -2.133(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<7>  |    4.546(R)|      SLOW  |   -1.940(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<8>  |    4.168(R)|      SLOW  |   -1.698(R)|      FAST  |clk_BUFGP         |   0.000|
+next_pc<9>  |   -0.030(R)|      SLOW  |    1.527(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<10> |   -0.114(R)|      FAST  |    1.688(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<11> |   -0.025(R)|      SLOW  |    1.522(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<12> |   -0.037(R)|      SLOW  |    1.534(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<13> |   -0.032(R)|      SLOW  |    1.529(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<14> |   -0.109(R)|      FAST  |    1.683(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<15> |   -0.098(R)|      SLOW  |    1.595(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<16> |   -0.182(R)|      FAST  |    1.756(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<17> |   -0.079(R)|      SLOW  |    1.576(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<18> |   -0.163(R)|      FAST  |    1.737(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<19> |   -0.078(R)|      SLOW  |    1.575(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<20> |   -0.162(R)|      FAST  |    1.736(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<21> |   -0.018(R)|      SLOW  |    1.515(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<22> |   -0.102(R)|      FAST  |    1.676(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<23> |   -0.154(R)|      FAST  |    1.728(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<24> |   -0.097(R)|      FAST  |    1.671(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<25> |   -0.098(R)|      FAST  |    1.672(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<26> |   -0.068(R)|      SLOW  |    1.565(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<27> |   -0.152(R)|      FAST  |    1.726(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<28> |   -0.157(R)|      FAST  |    1.731(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<29> |   -0.070(R)|      SLOW  |    1.567(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<30> |   -0.159(R)|      FAST  |    1.733(R)|      SLOW  |clk_BUFGP         |   0.000|
+next_pc<31> |   -0.073(R)|      SLOW  |    1.570(R)|      SLOW  |clk_BUFGP         |   0.000|
+rst         |    4.954(R)|      SLOW  |    0.698(R)|      SLOW  |clk_BUFGP         |   0.000|
+stall       |    6.784(R)|      SLOW  |    1.054(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+pc<0>       |         8.040(R)|      SLOW  |         3.076(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<1>       |         8.040(R)|      SLOW  |         3.076(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<2>       |         8.091(R)|      SLOW  |         3.127(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<3>       |         8.091(R)|      SLOW  |         3.127(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<4>       |         8.040(R)|      SLOW  |         3.076(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<5>       |         8.040(R)|      SLOW  |         3.076(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<6>       |         8.090(R)|      SLOW  |         3.126(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<7>       |         8.090(R)|      SLOW  |         3.126(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<8>       |         8.022(R)|      SLOW  |         3.058(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<9>       |        13.721(R)|      SLOW  |         5.938(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<10>      |        13.239(R)|      SLOW  |         5.653(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<11>      |        13.217(R)|      SLOW  |         5.579(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<12>      |        13.181(R)|      SLOW  |         5.594(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<13>      |        13.677(R)|      SLOW  |         5.858(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<14>      |        12.882(R)|      SLOW  |         5.409(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<15>      |        14.555(R)|      SLOW  |         6.372(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<16>      |        14.388(R)|      SLOW  |         6.267(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<17>      |        15.046(R)|      SLOW  |         6.709(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<18>      |        15.610(R)|      SLOW  |         7.076(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<19>      |        15.845(R)|      SLOW  |         7.240(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<20>      |        15.062(R)|      SLOW  |         6.745(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<21>      |        14.255(R)|      SLOW  |         6.353(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<22>      |        14.761(R)|      SLOW  |         6.609(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<23>      |        12.772(R)|      SLOW  |         5.606(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<24>      |        13.968(R)|      SLOW  |         6.161(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<25>      |        13.631(R)|      SLOW  |         5.979(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<26>      |        12.153(R)|      SLOW  |         5.119(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<27>      |        12.050(R)|      SLOW  |         5.100(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<28>      |        12.209(R)|      SLOW  |         5.188(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<29>      |        12.052(R)|      SLOW  |         5.102(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<30>      |        12.211(R)|      SLOW  |         5.190(R)|      FAST  |clk_BUFGP         |   0.000|
+pc<31>      |        12.055(R)|      SLOW  |         5.105(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+
+Analysis completed Thu Oct 15 21:22:06 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 382 MB
+
+
+

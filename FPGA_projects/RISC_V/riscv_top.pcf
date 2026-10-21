@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 21 21:05:31 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P55" LEVEL 1;
+COMP "led_unused_n<0>" LOCATE = SITE "P74" LEVEL 1;
+COMP "led_unused_n<1>" LOCATE = SITE "P67" LEVEL 1;
+COMP "led_unused_n<2>" LOCATE = SITE "P66" LEVEL 1;
+COMP "led_unused_n<3>" LOCATE = SITE "P62" LEVEL 1;
+COMP "led_unused_n<4>" LOCATE = SITE "P61" LEVEL 1;
+COMP "btn_reset_n" LOCATE = SITE "P41" LEVEL 1;
+COMP "btn_start_n" LOCATE = SITE "P40" LEVEL 1;
+COMP "led_done_n" LOCATE = SITE "P78" LEVEL 1;
+COMP "led_error_n" LOCATE = SITE "P75" LEVEL 1;
+COMP "led_running_n" LOCATE = SITE "P79" LEVEL 1;
+SCHEMATIC END;
+

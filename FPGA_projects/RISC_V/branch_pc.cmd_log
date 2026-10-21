@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/branch_pc.xst" -ofn "/home/ise/Desktop/RISC_V/branch_pc.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/branch_pc.xst" -ofn "/home/ise/Desktop/RISC_V/branch_pc.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/branch_pc.xst" -ofn "/home/ise/Desktop/RISC_V/branch_pc.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 branch_pc.ngc branch_pc.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o branch_pc_map.ncd branch_pc.ngd branch_pc.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/branch_pc.xst" -ofn "/home/ise/Desktop/RISC_V/branch_pc.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 branch_pc.ngc branch_pc.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o branch_pc_map.ncd branch_pc.ngd branch_pc.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/branch_pc.xst" -ofn "/home/ise/Desktop/RISC_V/branch_pc.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 branch_pc.ngc branch_pc.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o branch_pc_map.ncd branch_pc.ngd branch_pc.pcf 

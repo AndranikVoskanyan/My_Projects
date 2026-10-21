@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml instruction_decoder.twx instruction_decoder.ncd -o
+instruction_decoder.twr instruction_decoder.pcf
+
+Design file:              instruction_decoder.ncd
+Physical constraint file: instruction_decoder.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+instruction<0> |opcode<0>      |   11.270|
+instruction<1> |opcode<1>      |   10.860|
+instruction<2> |opcode<2>      |   11.016|
+instruction<3> |opcode<3>      |   10.773|
+instruction<4> |opcode<4>      |   10.377|
+instruction<5> |opcode<5>      |   10.145|
+instruction<6> |opcode<6>      |    7.728|
+instruction<7> |rd<0>          |   11.328|
+instruction<8> |rd<1>          |   10.749|
+instruction<9> |rd<2>          |   10.610|
+instruction<10>|rd<3>          |   11.634|
+instruction<11>|rd<4>          |   11.665|
+instruction<12>|funct3<0>      |    9.756|
+instruction<13>|funct3<1>      |    9.960|
+instruction<14>|funct3<2>      |    9.561|
+instruction<15>|rs1<0>         |    7.500|
+instruction<16>|rs1<1>         |    8.259|
+instruction<17>|rs1<2>         |    7.368|
+instruction<18>|rs1<3>         |    9.147|
+instruction<19>|rs1<4>         |    9.090|
+instruction<20>|rs2<0>         |    9.560|
+instruction<21>|rs2<1>         |    9.261|
+instruction<22>|rs2<2>         |   10.115|
+instruction<23>|rs2<3>         |    9.418|
+instruction<24>|rs2<4>         |   10.010|
+instruction<25>|funct7<0>      |   10.722|
+instruction<26>|funct7<1>      |    8.809|
+instruction<27>|funct7<2>      |    9.062|
+instruction<28>|funct7<3>      |    8.845|
+instruction<29>|funct7<4>      |    8.697|
+instruction<30>|funct7<5>      |    8.880|
+instruction<31>|funct7<6>      |    8.809|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Oct 15 21:46:01 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 381 MB
+
+
+

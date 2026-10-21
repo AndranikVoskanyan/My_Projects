@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/riscv_top.xst" -ofn "/home/ise/Desktop/RISC_V/riscv_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 riscv_top.ngc riscv_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o riscv_top_map.ncd riscv_top.ngd riscv_top.pcf 
+par -w -intstyle ise -ol high -mt off riscv_top_map.ncd riscv_top.ncd riscv_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml riscv_top.twx riscv_top.ncd -o riscv_top.twr riscv_top.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/riscv_top.xst" -ofn "/home/ise/Desktop/RISC_V/riscv_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 riscv_top.ngc riscv_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o riscv_top_map.ncd riscv_top.ngd riscv_top.pcf 
+par -w -intstyle ise -ol high -mt off riscv_top_map.ncd riscv_top.ncd riscv_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml riscv_top.twx riscv_top.ncd -o riscv_top.twr riscv_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 riscv_top.ngc riscv_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o riscv_top_map.ncd riscv_top.ngd riscv_top.pcf 
+par -w -intstyle ise -ol high -mt off riscv_top_map.ncd riscv_top.ncd riscv_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml riscv_top.twx riscv_top.ncd -o riscv_top.twr riscv_top.pcf 
+bitgen -intstyle ise -f riscv_top.ut riscv_top.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/riscv_top.xst" -ofn "/home/ise/Desktop/RISC_V/riscv_top.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/riscv_top.xst" -ofn "/home/ise/Desktop/RISC_V/riscv_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc6slx9-tqg144-2 riscv_top.ngc riscv_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o riscv_top_map.ncd riscv_top.ngd riscv_top.pcf 
+par -w -intstyle ise -ol high -mt off riscv_top_map.ncd riscv_top.ncd riscv_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml riscv_top.twx riscv_top.ncd -o riscv_top.twr riscv_top.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f riscv_top.ut riscv_top.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/riscv_top.xst" -ofn "/home/ise/Desktop/RISC_V/riscv_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pinout.ucf -p xc6slx9-tqg144-2 riscv_top.ngc riscv_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o riscv_top_map.ncd riscv_top.ngd riscv_top.pcf 
+par -w -intstyle ise -ol high -mt off riscv_top_map.ncd riscv_top.ncd riscv_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml riscv_top.twx riscv_top.ncd -o riscv_top.twr riscv_top.pcf -ucf pinout.ucf 
+bitgen -intstyle ise -f riscv_top.ut riscv_top.ncd 

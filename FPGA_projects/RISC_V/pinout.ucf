@@ -1,0 +1,17 @@
+NET "clk" LOC = "P55";
+
+NET "btn_start_n" LOC = "P40";
+NET "btn_reset_n" LOC = "P41";
+
+# Processor status LEDs
+NET "led_running_n" LOC = "P79";
+NET "led_done_n"    LOC = "P78";
+NET "led_error_n"   LOC = "P75";
+
+# LED4: START pressed (debounced)
+NET "led_unused_n<0>" LOC = "P74" ;
+NET "led_unused_n<1>" LOC = "P67";
+# LED6-LED8: unused, held high
+NET "led_unused_n<2>" LOC = "P66";
+NET "led_unused_n<3>" LOC = "P62";
+NET "led_unused_n<4>" LOC = "P61";

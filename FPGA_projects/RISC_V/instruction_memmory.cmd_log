@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_memmory.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_memmory.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_memmory.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_memmory.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_memmory.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_memmory.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_memmory.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_memmory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 instruction_memmory.ngc instruction_memmory.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o instruction_memmory_map.ncd instruction_memmory.ngd instruction_memmory.pcf 
+par -w -intstyle ise -ol high -mt off instruction_memmory_map.ncd instruction_memmory.ncd instruction_memmory.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml instruction_memmory.twx instruction_memmory.ncd -o instruction_memmory.twr instruction_memmory.pcf 

@@ -1,0 +1,206 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml immediate_generator.twx immediate_generator.ncd -o
+immediate_generator.twr immediate_generator.pcf
+
+Design file:              immediate_generator.ncd
+Physical constraint file: immediate_generator.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+imm_sel<0>     |immidiate<0>   |   13.755|
+imm_sel<0>     |immidiate<1>   |   13.392|
+imm_sel<0>     |immidiate<2>   |   13.741|
+imm_sel<0>     |immidiate<3>   |   14.169|
+imm_sel<0>     |immidiate<4>   |   14.086|
+imm_sel<0>     |immidiate<5>   |   13.696|
+imm_sel<0>     |immidiate<6>   |   13.438|
+imm_sel<0>     |immidiate<7>   |   13.605|
+imm_sel<0>     |immidiate<8>   |   12.879|
+imm_sel<0>     |immidiate<9>   |   12.877|
+imm_sel<0>     |immidiate<10>  |   12.905|
+imm_sel<0>     |immidiate<11>  |   13.343|
+imm_sel<0>     |immidiate<12>  |   14.691|
+imm_sel<0>     |immidiate<13>  |   15.330|
+imm_sel<0>     |immidiate<14>  |   15.039|
+imm_sel<0>     |immidiate<15>  |   13.440|
+imm_sel<0>     |immidiate<16>  |   13.374|
+imm_sel<0>     |immidiate<17>  |   13.148|
+imm_sel<0>     |immidiate<18>  |   13.498|
+imm_sel<0>     |immidiate<19>  |   13.747|
+imm_sel<0>     |immidiate<20>  |   14.195|
+imm_sel<0>     |immidiate<21>  |   13.509|
+imm_sel<0>     |immidiate<22>  |   14.325|
+imm_sel<0>     |immidiate<23>  |   14.062|
+imm_sel<0>     |immidiate<24>  |   13.733|
+imm_sel<0>     |immidiate<25>  |   15.319|
+imm_sel<0>     |immidiate<26>  |   14.586|
+imm_sel<0>     |immidiate<27>  |   12.802|
+imm_sel<0>     |immidiate<28>  |   12.950|
+imm_sel<0>     |immidiate<29>  |   13.168|
+imm_sel<0>     |immidiate<30>  |   12.973|
+imm_sel<0>     |immidiate<31>  |   12.589|
+imm_sel<1>     |immidiate<0>   |   14.249|
+imm_sel<1>     |immidiate<1>   |   13.830|
+imm_sel<1>     |immidiate<2>   |   13.873|
+imm_sel<1>     |immidiate<3>   |   13.964|
+imm_sel<1>     |immidiate<4>   |   13.531|
+imm_sel<1>     |immidiate<5>   |   13.620|
+imm_sel<1>     |immidiate<6>   |   13.592|
+imm_sel<1>     |immidiate<7>   |   13.552|
+imm_sel<1>     |immidiate<8>   |   12.843|
+imm_sel<1>     |immidiate<9>   |   13.121|
+imm_sel<1>     |immidiate<10>  |   13.099|
+imm_sel<1>     |immidiate<11>  |   13.124|
+imm_sel<1>     |immidiate<12>  |   14.398|
+imm_sel<1>     |immidiate<13>  |   15.140|
+imm_sel<1>     |immidiate<14>  |   15.331|
+imm_sel<1>     |immidiate<15>  |   13.451|
+imm_sel<1>     |immidiate<16>  |   13.402|
+imm_sel<1>     |immidiate<17>  |   13.216|
+imm_sel<1>     |immidiate<18>  |   13.574|
+imm_sel<1>     |immidiate<19>  |   13.746|
+imm_sel<1>     |immidiate<20>  |   14.083|
+imm_sel<1>     |immidiate<21>  |   13.893|
+imm_sel<1>     |immidiate<22>  |   14.530|
+imm_sel<1>     |immidiate<23>  |   14.384|
+imm_sel<1>     |immidiate<24>  |   13.875|
+imm_sel<1>     |immidiate<25>  |   15.243|
+imm_sel<1>     |immidiate<26>  |   14.740|
+imm_sel<1>     |immidiate<27>  |   13.173|
+imm_sel<1>     |immidiate<28>  |   12.914|
+imm_sel<1>     |immidiate<29>  |   13.412|
+imm_sel<1>     |immidiate<30>  |   13.167|
+imm_sel<1>     |immidiate<31>  |   12.960|
+imm_sel<2>     |immidiate<0>   |   13.073|
+imm_sel<2>     |immidiate<1>   |   12.217|
+imm_sel<2>     |immidiate<2>   |   12.422|
+imm_sel<2>     |immidiate<3>   |   12.925|
+imm_sel<2>     |immidiate<4>   |   12.734|
+imm_sel<2>     |immidiate<5>   |   12.564|
+imm_sel<2>     |immidiate<6>   |   12.635|
+imm_sel<2>     |immidiate<7>   |   12.755|
+imm_sel<2>     |immidiate<8>   |   12.077|
+imm_sel<2>     |immidiate<9>   |   11.515|
+imm_sel<2>     |immidiate<10>  |   11.389|
+imm_sel<2>     |immidiate<11>  |   12.104|
+imm_sel<2>     |immidiate<12>  |   13.381|
+imm_sel<2>     |immidiate<13>  |   14.245|
+imm_sel<2>     |immidiate<14>  |   14.229|
+imm_sel<2>     |immidiate<15>  |   11.999|
+imm_sel<2>     |immidiate<16>  |   12.139|
+imm_sel<2>     |immidiate<17>  |   11.556|
+imm_sel<2>     |immidiate<18>  |   12.154|
+imm_sel<2>     |immidiate<19>  |   12.027|
+imm_sel<2>     |immidiate<20>  |   13.200|
+imm_sel<2>     |immidiate<21>  |   12.771|
+imm_sel<2>     |immidiate<22>  |   12.898|
+imm_sel<2>     |immidiate<23>  |   13.201|
+imm_sel<2>     |immidiate<24>  |   12.658|
+imm_sel<2>     |immidiate<25>  |   14.187|
+imm_sel<2>     |immidiate<26>  |   13.783|
+imm_sel<2>     |immidiate<27>  |   12.101|
+imm_sel<2>     |immidiate<28>  |   12.148|
+imm_sel<2>     |immidiate<29>  |   11.806|
+imm_sel<2>     |immidiate<30>  |   11.457|
+imm_sel<2>     |immidiate<31>  |   11.888|
+instruction<7> |immidiate<0>   |   11.987|
+instruction<7> |immidiate<11>  |   11.264|
+instruction<8> |immidiate<1>   |   11.922|
+instruction<9> |immidiate<2>   |   11.834|
+instruction<10>|immidiate<3>   |   11.776|
+instruction<11>|immidiate<4>   |   11.998|
+instruction<12>|immidiate<12>  |   12.051|
+instruction<13>|immidiate<13>  |   13.039|
+instruction<14>|immidiate<14>  |   12.335|
+instruction<15>|immidiate<15>  |   11.715|
+instruction<16>|immidiate<16>  |   11.351|
+instruction<17>|immidiate<17>  |   11.521|
+instruction<18>|immidiate<18>  |   11.940|
+instruction<19>|immidiate<19>  |   11.778|
+instruction<20>|immidiate<0>   |   13.801|
+instruction<20>|immidiate<11>  |   12.985|
+instruction<20>|immidiate<20>  |   13.761|
+instruction<21>|immidiate<1>   |   13.382|
+instruction<21>|immidiate<21>  |   13.553|
+instruction<22>|immidiate<2>   |   13.679|
+instruction<22>|immidiate<22>  |   14.132|
+instruction<23>|immidiate<3>   |   12.075|
+instruction<23>|immidiate<23>  |   12.548|
+instruction<24>|immidiate<4>   |   13.256|
+instruction<24>|immidiate<24>  |   13.721|
+instruction<25>|immidiate<5>   |   10.535|
+instruction<25>|immidiate<25>  |   12.158|
+instruction<26>|immidiate<6>   |   11.617|
+instruction<26>|immidiate<26>  |   12.765|
+instruction<27>|immidiate<7>   |   11.120|
+instruction<27>|immidiate<27>  |   12.567|
+instruction<28>|immidiate<8>   |   11.136|
+instruction<28>|immidiate<28>  |   11.207|
+instruction<29>|immidiate<9>   |   12.015|
+instruction<29>|immidiate<29>  |   12.306|
+instruction<30>|immidiate<10>  |   10.990|
+instruction<30>|immidiate<30>  |   11.058|
+instruction<31>|immidiate<11>  |   13.633|
+instruction<31>|immidiate<12>  |   12.955|
+instruction<31>|immidiate<13>  |   13.089|
+instruction<31>|immidiate<14>  |   13.064|
+instruction<31>|immidiate<15>  |   13.619|
+instruction<31>|immidiate<16>  |   13.579|
+instruction<31>|immidiate<17>  |   13.632|
+instruction<31>|immidiate<18>  |   13.667|
+instruction<31>|immidiate<19>  |   13.425|
+instruction<31>|immidiate<20>  |   14.255|
+instruction<31>|immidiate<21>  |   13.523|
+instruction<31>|immidiate<22>  |   13.582|
+instruction<31>|immidiate<23>  |   14.540|
+instruction<31>|immidiate<24>  |   13.588|
+instruction<31>|immidiate<25>  |   15.188|
+instruction<31>|immidiate<26>  |   14.789|
+instruction<31>|immidiate<27>  |   13.577|
+instruction<31>|immidiate<28>  |   13.130|
+instruction<31>|immidiate<29>  |   13.164|
+instruction<31>|immidiate<30>  |   13.036|
+instruction<31>|immidiate<31>  |   13.364|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Oct 15 22:20:58 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 382 MB
+
+
+

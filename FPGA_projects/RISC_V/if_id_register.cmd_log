@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/if_id_register.xst" -ofn "/home/ise/Desktop/RISC_V/if_id_register.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 if_id_register.ngc if_id_register.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o if_id_register_map.ncd if_id_register.ngd if_id_register.pcf 

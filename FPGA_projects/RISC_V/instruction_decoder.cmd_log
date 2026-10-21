@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_decoder.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 instruction_decoder.ngc instruction_decoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o instruction_decoder_map.ncd instruction_decoder.ngd instruction_decoder.pcf 
+par -w -intstyle ise -ol high -mt off instruction_decoder_map.ncd instruction_decoder.ncd instruction_decoder.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml instruction_decoder.twx instruction_decoder.ncd -o instruction_decoder.twr instruction_decoder.pcf 
+xst -intstyle ise -ifn "/home/ise/Desktop/RISC_V/instruction_decoder.xst" -ofn "/home/ise/Desktop/RISC_V/instruction_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 instruction_decoder.ngc instruction_decoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o instruction_decoder_map.ncd instruction_decoder.ngd instruction_decoder.pcf 
+par -w -intstyle ise -ol high -mt off instruction_decoder_map.ncd instruction_decoder.ncd instruction_decoder.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml instruction_decoder.twx instruction_decoder.ncd -o instruction_decoder.twr instruction_decoder.pcf 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Desktop/RISC_V/riscv_top.ncd
+OUTFILE=/home/ise/Desktop/RISC_V/riscv_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/ise/Desktop/RISC_V
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

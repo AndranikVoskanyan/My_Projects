@@ -1,0 +1,817 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml control_unit.twx control_unit.ncd -o control_unit.twr
+control_unit.pcf
+
+Design file:              control_unit.ncd
+Physical constraint file: control_unit.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+instruction<0> |alu_op<0>      |   15.703|
+instruction<0> |alu_op<1>      |   18.510|
+instruction<0> |alu_op<2>      |   16.606|
+instruction<0> |alu_op<3>      |   14.541|
+instruction<0> |alu_src_a<0>   |   16.922|
+instruction<0> |alu_src_a<1>   |   17.459|
+instruction<0> |alu_src_b      |   16.863|
+instruction<0> |branch_en      |   16.831|
+instruction<0> |branch_op<0>   |   17.986|
+instruction<0> |branch_op<1>   |   18.089|
+instruction<0> |branch_op<2>   |   17.876|
+instruction<0> |ebreak         |   16.344|
+instruction<0> |ecall          |   16.074|
+instruction<0> |illegal_instr  |   16.538|
+instruction<0> |imm_sel<0>     |   17.632|
+instruction<0> |imm_sel<1>     |   16.585|
+instruction<0> |imm_sel<2>     |   17.049|
+instruction<0> |jalr           |   16.927|
+instruction<0> |jump           |   17.257|
+instruction<0> |mem_en         |   16.765|
+instruction<0> |mem_op<0>      |   18.914|
+instruction<0> |mem_op<1>      |   17.886|
+instruction<0> |mem_op<2>      |   17.757|
+instruction<0> |reg_write      |   16.642|
+instruction<0> |wb_sel<0>      |   15.370|
+instruction<0> |wb_sel<1>      |   18.229|
+instruction<1> |alu_op<0>      |   15.665|
+instruction<1> |alu_op<1>      |   18.499|
+instruction<1> |alu_op<2>      |   16.595|
+instruction<1> |alu_op<3>      |   14.503|
+instruction<1> |alu_src_a<0>   |   16.911|
+instruction<1> |alu_src_a<1>   |   17.448|
+instruction<1> |alu_src_b      |   16.852|
+instruction<1> |branch_en      |   16.820|
+instruction<1> |branch_op<0>   |   17.975|
+instruction<1> |branch_op<1>   |   18.078|
+instruction<1> |branch_op<2>   |   17.865|
+instruction<1> |ebreak         |   16.333|
+instruction<1> |ecall          |   16.063|
+instruction<1> |illegal_instr  |   16.527|
+instruction<1> |imm_sel<0>     |   17.621|
+instruction<1> |imm_sel<1>     |   16.574|
+instruction<1> |imm_sel<2>     |   17.038|
+instruction<1> |jalr           |   16.916|
+instruction<1> |jump           |   17.246|
+instruction<1> |mem_en         |   16.754|
+instruction<1> |mem_op<0>      |   18.903|
+instruction<1> |mem_op<1>      |   17.875|
+instruction<1> |mem_op<2>      |   17.746|
+instruction<1> |reg_write      |   16.631|
+instruction<1> |wb_sel<0>      |   15.332|
+instruction<1> |wb_sel<1>      |   18.218|
+instruction<2> |alu_op<0>      |   15.531|
+instruction<2> |alu_op<1>      |   18.144|
+instruction<2> |alu_op<2>      |   16.240|
+instruction<2> |alu_op<3>      |   14.273|
+instruction<2> |alu_src_a<0>   |   16.556|
+instruction<2> |alu_src_a<1>   |   17.093|
+instruction<2> |alu_src_b      |   16.497|
+instruction<2> |branch_en      |   16.465|
+instruction<2> |branch_op<0>   |   17.620|
+instruction<2> |branch_op<1>   |   17.723|
+instruction<2> |branch_op<2>   |   17.510|
+instruction<2> |ebreak         |   15.978|
+instruction<2> |ecall          |   15.708|
+instruction<2> |illegal_instr  |   16.172|
+instruction<2> |imm_sel<0>     |   17.266|
+instruction<2> |imm_sel<1>     |   16.219|
+instruction<2> |imm_sel<2>     |   16.683|
+instruction<2> |jalr           |   16.561|
+instruction<2> |jump           |   16.891|
+instruction<2> |mem_en         |   16.399|
+instruction<2> |mem_op<0>      |   18.548|
+instruction<2> |mem_op<1>      |   17.520|
+instruction<2> |mem_op<2>      |   17.391|
+instruction<2> |reg_write      |   16.276|
+instruction<2> |wb_sel<0>      |   15.076|
+instruction<2> |wb_sel<1>      |   17.863|
+instruction<3> |alu_op<0>      |   15.539|
+instruction<3> |alu_op<1>      |   18.346|
+instruction<3> |alu_op<2>      |   16.442|
+instruction<3> |alu_op<3>      |   14.377|
+instruction<3> |alu_src_a<0>   |   16.758|
+instruction<3> |alu_src_a<1>   |   17.295|
+instruction<3> |alu_src_b      |   16.699|
+instruction<3> |branch_en      |   16.667|
+instruction<3> |branch_op<0>   |   17.822|
+instruction<3> |branch_op<1>   |   17.925|
+instruction<3> |branch_op<2>   |   17.712|
+instruction<3> |ebreak         |   16.180|
+instruction<3> |ecall          |   15.910|
+instruction<3> |illegal_instr  |   16.374|
+instruction<3> |imm_sel<0>     |   17.468|
+instruction<3> |imm_sel<1>     |   16.421|
+instruction<3> |imm_sel<2>     |   16.885|
+instruction<3> |jalr           |   16.763|
+instruction<3> |jump           |   17.093|
+instruction<3> |mem_en         |   16.601|
+instruction<3> |mem_op<0>      |   18.750|
+instruction<3> |mem_op<1>      |   17.722|
+instruction<3> |mem_op<2>      |   17.593|
+instruction<3> |reg_write      |   16.478|
+instruction<3> |wb_sel<0>      |   15.206|
+instruction<3> |wb_sel<1>      |   18.065|
+instruction<4> |alu_op<0>      |   14.867|
+instruction<4> |alu_op<1>      |   18.028|
+instruction<4> |alu_op<2>      |   16.124|
+instruction<4> |alu_op<3>      |   13.609|
+instruction<4> |alu_src_a<0>   |   16.440|
+instruction<4> |alu_src_a<1>   |   16.977|
+instruction<4> |alu_src_b      |   16.381|
+instruction<4> |branch_en      |   16.349|
+instruction<4> |branch_op<0>   |   17.504|
+instruction<4> |branch_op<1>   |   17.607|
+instruction<4> |branch_op<2>   |   17.394|
+instruction<4> |ebreak         |   15.862|
+instruction<4> |ecall          |   15.592|
+instruction<4> |illegal_instr  |   16.056|
+instruction<4> |imm_sel<0>     |   17.150|
+instruction<4> |imm_sel<1>     |   16.103|
+instruction<4> |imm_sel<2>     |   16.567|
+instruction<4> |jalr           |   16.445|
+instruction<4> |jump           |   16.775|
+instruction<4> |mem_en         |   16.283|
+instruction<4> |mem_op<0>      |   18.432|
+instruction<4> |mem_op<1>      |   17.404|
+instruction<4> |mem_op<2>      |   17.275|
+instruction<4> |reg_write      |   16.160|
+instruction<4> |wb_sel<0>      |   14.189|
+instruction<4> |wb_sel<1>      |   17.747|
+instruction<5> |alu_op<0>      |   15.679|
+instruction<5> |alu_op<1>      |   18.069|
+instruction<5> |alu_op<2>      |   16.165|
+instruction<5> |alu_op<3>      |   14.421|
+instruction<5> |alu_src_a<0>   |   16.481|
+instruction<5> |alu_src_a<1>   |   17.018|
+instruction<5> |alu_src_b      |   16.422|
+instruction<5> |branch_en      |   16.390|
+instruction<5> |branch_op<0>   |   17.545|
+instruction<5> |branch_op<1>   |   17.648|
+instruction<5> |branch_op<2>   |   17.435|
+instruction<5> |ebreak         |   15.903|
+instruction<5> |ecall          |   15.633|
+instruction<5> |illegal_instr  |   16.097|
+instruction<5> |imm_sel<0>     |   17.191|
+instruction<5> |imm_sel<1>     |   16.144|
+instruction<5> |imm_sel<2>     |   16.608|
+instruction<5> |jalr           |   16.486|
+instruction<5> |jump           |   16.816|
+instruction<5> |mem_en         |   16.324|
+instruction<5> |mem_op<0>      |   18.473|
+instruction<5> |mem_op<1>      |   17.445|
+instruction<5> |mem_op<2>      |   17.316|
+instruction<5> |reg_write      |   16.201|
+instruction<5> |wb_sel<0>      |   15.001|
+instruction<5> |wb_sel<1>      |   17.788|
+instruction<6> |alu_op<0>      |   15.235|
+instruction<6> |alu_op<1>      |   18.042|
+instruction<6> |alu_op<2>      |   16.138|
+instruction<6> |alu_op<3>      |   14.073|
+instruction<6> |alu_src_a<0>   |   16.454|
+instruction<6> |alu_src_a<1>   |   16.991|
+instruction<6> |alu_src_b      |   16.395|
+instruction<6> |branch_en      |   16.363|
+instruction<6> |branch_op<0>   |   17.518|
+instruction<6> |branch_op<1>   |   17.621|
+instruction<6> |branch_op<2>   |   17.408|
+instruction<6> |ebreak         |   15.876|
+instruction<6> |ecall          |   15.606|
+instruction<6> |illegal_instr  |   16.070|
+instruction<6> |imm_sel<0>     |   17.164|
+instruction<6> |imm_sel<1>     |   16.117|
+instruction<6> |imm_sel<2>     |   16.581|
+instruction<6> |jalr           |   16.459|
+instruction<6> |jump           |   16.789|
+instruction<6> |mem_en         |   16.297|
+instruction<6> |mem_op<0>      |   18.446|
+instruction<6> |mem_op<1>      |   17.418|
+instruction<6> |mem_op<2>      |   17.289|
+instruction<6> |reg_write      |   16.174|
+instruction<6> |wb_sel<0>      |   14.902|
+instruction<6> |wb_sel<1>      |   17.761|
+instruction<7> |alu_op<1>      |   17.860|
+instruction<7> |alu_op<2>      |   15.956|
+instruction<7> |alu_src_a<0>   |   16.272|
+instruction<7> |alu_src_a<1>   |   16.809|
+instruction<7> |alu_src_b      |   16.213|
+instruction<7> |branch_en      |   16.181|
+instruction<7> |branch_op<0>   |   17.336|
+instruction<7> |branch_op<1>   |   17.439|
+instruction<7> |branch_op<2>   |   17.226|
+instruction<7> |ebreak         |   15.694|
+instruction<7> |ecall          |   15.424|
+instruction<7> |illegal_instr  |   15.888|
+instruction<7> |imm_sel<0>     |   16.982|
+instruction<7> |imm_sel<1>     |   15.935|
+instruction<7> |imm_sel<2>     |   16.399|
+instruction<7> |jalr           |   16.277|
+instruction<7> |jump           |   16.607|
+instruction<7> |mem_en         |   16.115|
+instruction<7> |mem_op<0>      |   18.264|
+instruction<7> |mem_op<1>      |   17.236|
+instruction<7> |mem_op<2>      |   17.107|
+instruction<7> |reg_write      |   15.992|
+instruction<7> |wb_sel<1>      |   17.579|
+instruction<8> |alu_op<1>      |   17.087|
+instruction<8> |alu_op<2>      |   15.183|
+instruction<8> |alu_src_a<0>   |   15.499|
+instruction<8> |alu_src_a<1>   |   16.036|
+instruction<8> |alu_src_b      |   15.440|
+instruction<8> |branch_en      |   15.408|
+instruction<8> |branch_op<0>   |   16.563|
+instruction<8> |branch_op<1>   |   16.666|
+instruction<8> |branch_op<2>   |   16.453|
+instruction<8> |ebreak         |   14.921|
+instruction<8> |ecall          |   14.651|
+instruction<8> |illegal_instr  |   15.115|
+instruction<8> |imm_sel<0>     |   16.209|
+instruction<8> |imm_sel<1>     |   15.162|
+instruction<8> |imm_sel<2>     |   15.626|
+instruction<8> |jalr           |   15.504|
+instruction<8> |jump           |   15.834|
+instruction<8> |mem_en         |   15.342|
+instruction<8> |mem_op<0>      |   17.491|
+instruction<8> |mem_op<1>      |   16.463|
+instruction<8> |mem_op<2>      |   16.334|
+instruction<8> |reg_write      |   15.219|
+instruction<8> |wb_sel<1>      |   16.806|
+instruction<9> |alu_op<1>      |   16.681|
+instruction<9> |alu_op<2>      |   14.777|
+instruction<9> |alu_src_a<0>   |   15.093|
+instruction<9> |alu_src_a<1>   |   15.630|
+instruction<9> |alu_src_b      |   15.034|
+instruction<9> |branch_en      |   15.002|
+instruction<9> |branch_op<0>   |   16.157|
+instruction<9> |branch_op<1>   |   16.260|
+instruction<9> |branch_op<2>   |   16.047|
+instruction<9> |ebreak         |   14.515|
+instruction<9> |ecall          |   14.245|
+instruction<9> |illegal_instr  |   14.709|
+instruction<9> |imm_sel<0>     |   15.803|
+instruction<9> |imm_sel<1>     |   14.756|
+instruction<9> |imm_sel<2>     |   15.220|
+instruction<9> |jalr           |   15.098|
+instruction<9> |jump           |   15.428|
+instruction<9> |mem_en         |   14.936|
+instruction<9> |mem_op<0>      |   17.085|
+instruction<9> |mem_op<1>      |   16.057|
+instruction<9> |mem_op<2>      |   15.928|
+instruction<9> |reg_write      |   14.813|
+instruction<9> |wb_sel<1>      |   16.400|
+instruction<10>|alu_op<1>      |   16.764|
+instruction<10>|alu_op<2>      |   14.860|
+instruction<10>|alu_src_a<0>   |   15.176|
+instruction<10>|alu_src_a<1>   |   15.713|
+instruction<10>|alu_src_b      |   15.117|
+instruction<10>|branch_en      |   15.085|
+instruction<10>|branch_op<0>   |   16.240|
+instruction<10>|branch_op<1>   |   16.343|
+instruction<10>|branch_op<2>   |   16.130|
+instruction<10>|ebreak         |   14.598|
+instruction<10>|ecall          |   14.328|
+instruction<10>|illegal_instr  |   14.792|
+instruction<10>|imm_sel<0>     |   15.886|
+instruction<10>|imm_sel<1>     |   14.839|
+instruction<10>|imm_sel<2>     |   15.303|
+instruction<10>|jalr           |   15.181|
+instruction<10>|jump           |   15.511|
+instruction<10>|mem_en         |   15.019|
+instruction<10>|mem_op<0>      |   17.168|
+instruction<10>|mem_op<1>      |   16.140|
+instruction<10>|mem_op<2>      |   16.011|
+instruction<10>|reg_write      |   14.896|
+instruction<10>|wb_sel<1>      |   16.483|
+instruction<11>|alu_op<1>      |   16.325|
+instruction<11>|alu_op<2>      |   14.421|
+instruction<11>|alu_src_a<0>   |   14.737|
+instruction<11>|alu_src_a<1>   |   15.274|
+instruction<11>|alu_src_b      |   14.678|
+instruction<11>|branch_en      |   14.646|
+instruction<11>|branch_op<0>   |   15.801|
+instruction<11>|branch_op<1>   |   15.904|
+instruction<11>|branch_op<2>   |   15.691|
+instruction<11>|ebreak         |   14.159|
+instruction<11>|ecall          |   13.889|
+instruction<11>|illegal_instr  |   14.353|
+instruction<11>|imm_sel<0>     |   15.447|
+instruction<11>|imm_sel<1>     |   14.400|
+instruction<11>|imm_sel<2>     |   14.864|
+instruction<11>|jalr           |   14.742|
+instruction<11>|jump           |   15.072|
+instruction<11>|mem_en         |   14.580|
+instruction<11>|mem_op<0>      |   16.729|
+instruction<11>|mem_op<1>      |   15.701|
+instruction<11>|mem_op<2>      |   15.572|
+instruction<11>|reg_write      |   14.457|
+instruction<11>|wb_sel<1>      |   16.044|
+instruction<12>|alu_op<0>      |   13.118|
+instruction<12>|alu_op<1>      |   17.045|
+instruction<12>|alu_op<2>      |   15.141|
+instruction<12>|alu_src_a<0>   |   15.457|
+instruction<12>|alu_src_a<1>   |   15.994|
+instruction<12>|alu_src_b      |   15.398|
+instruction<12>|branch_en      |   15.366|
+instruction<12>|branch_op<0>   |   16.521|
+instruction<12>|branch_op<1>   |   16.624|
+instruction<12>|branch_op<2>   |   16.411|
+instruction<12>|ebreak         |   14.879|
+instruction<12>|ecall          |   14.609|
+instruction<12>|illegal_instr  |   15.073|
+instruction<12>|imm_sel<0>     |   16.167|
+instruction<12>|imm_sel<1>     |   15.120|
+instruction<12>|imm_sel<2>     |   15.584|
+instruction<12>|jalr           |   15.462|
+instruction<12>|jump           |   15.792|
+instruction<12>|mem_en         |   15.300|
+instruction<12>|mem_op<0>      |   17.449|
+instruction<12>|mem_op<1>      |   16.421|
+instruction<12>|mem_op<2>      |   16.292|
+instruction<12>|reg_write      |   15.177|
+instruction<12>|wb_sel<0>      |   13.280|
+instruction<12>|wb_sel<1>      |   16.764|
+instruction<13>|alu_op<0>      |   13.348|
+instruction<13>|alu_op<1>      |   17.134|
+instruction<13>|alu_op<2>      |   15.230|
+instruction<13>|alu_op<3>      |   11.593|
+instruction<13>|alu_src_a<0>   |   15.546|
+instruction<13>|alu_src_a<1>   |   16.083|
+instruction<13>|alu_src_b      |   15.487|
+instruction<13>|branch_en      |   15.455|
+instruction<13>|branch_op<0>   |   16.610|
+instruction<13>|branch_op<1>   |   16.713|
+instruction<13>|branch_op<2>   |   16.500|
+instruction<13>|ebreak         |   14.968|
+instruction<13>|ecall          |   14.698|
+instruction<13>|illegal_instr  |   15.162|
+instruction<13>|imm_sel<0>     |   16.256|
+instruction<13>|imm_sel<1>     |   15.209|
+instruction<13>|imm_sel<2>     |   15.673|
+instruction<13>|jalr           |   15.551|
+instruction<13>|jump           |   15.881|
+instruction<13>|mem_en         |   15.389|
+instruction<13>|mem_op<0>      |   17.538|
+instruction<13>|mem_op<1>      |   16.510|
+instruction<13>|mem_op<2>      |   16.381|
+instruction<13>|reg_write      |   15.266|
+instruction<13>|wb_sel<0>      |   13.510|
+instruction<13>|wb_sel<1>      |   16.853|
+instruction<14>|alu_op<0>      |   13.284|
+instruction<14>|alu_op<1>      |   17.868|
+instruction<14>|alu_op<2>      |   15.964|
+instruction<14>|alu_op<3>      |   12.170|
+instruction<14>|alu_src_a<0>   |   16.280|
+instruction<14>|alu_src_a<1>   |   16.817|
+instruction<14>|alu_src_b      |   16.221|
+instruction<14>|branch_en      |   16.189|
+instruction<14>|branch_op<0>   |   17.344|
+instruction<14>|branch_op<1>   |   17.447|
+instruction<14>|branch_op<2>   |   17.234|
+instruction<14>|ebreak         |   15.702|
+instruction<14>|ecall          |   15.432|
+instruction<14>|illegal_instr  |   15.896|
+instruction<14>|imm_sel<0>     |   16.990|
+instruction<14>|imm_sel<1>     |   15.943|
+instruction<14>|imm_sel<2>     |   16.407|
+instruction<14>|jalr           |   16.285|
+instruction<14>|jump           |   16.615|
+instruction<14>|mem_en         |   16.123|
+instruction<14>|mem_op<0>      |   18.272|
+instruction<14>|mem_op<1>      |   17.244|
+instruction<14>|mem_op<2>      |   17.115|
+instruction<14>|reg_write      |   16.000|
+instruction<14>|wb_sel<0>      |   13.210|
+instruction<14>|wb_sel<1>      |   17.587|
+instruction<15>|alu_op<1>      |   16.961|
+instruction<15>|alu_op<2>      |   15.057|
+instruction<15>|alu_src_a<0>   |   15.373|
+instruction<15>|alu_src_a<1>   |   15.910|
+instruction<15>|alu_src_b      |   15.314|
+instruction<15>|branch_en      |   15.282|
+instruction<15>|branch_op<0>   |   16.437|
+instruction<15>|branch_op<1>   |   16.540|
+instruction<15>|branch_op<2>   |   16.327|
+instruction<15>|ebreak         |   14.795|
+instruction<15>|ecall          |   14.525|
+instruction<15>|illegal_instr  |   14.989|
+instruction<15>|imm_sel<0>     |   16.083|
+instruction<15>|imm_sel<1>     |   15.036|
+instruction<15>|imm_sel<2>     |   15.500|
+instruction<15>|jalr           |   15.378|
+instruction<15>|jump           |   15.708|
+instruction<15>|mem_en         |   15.216|
+instruction<15>|mem_op<0>      |   17.365|
+instruction<15>|mem_op<1>      |   16.337|
+instruction<15>|mem_op<2>      |   16.208|
+instruction<15>|reg_write      |   15.093|
+instruction<15>|wb_sel<1>      |   16.680|
+instruction<16>|alu_op<1>      |   16.813|
+instruction<16>|alu_op<2>      |   14.909|
+instruction<16>|alu_src_a<0>   |   15.225|
+instruction<16>|alu_src_a<1>   |   15.762|
+instruction<16>|alu_src_b      |   15.166|
+instruction<16>|branch_en      |   15.134|
+instruction<16>|branch_op<0>   |   16.289|
+instruction<16>|branch_op<1>   |   16.392|
+instruction<16>|branch_op<2>   |   16.179|
+instruction<16>|ebreak         |   14.647|
+instruction<16>|ecall          |   14.377|
+instruction<16>|illegal_instr  |   14.841|
+instruction<16>|imm_sel<0>     |   15.935|
+instruction<16>|imm_sel<1>     |   14.888|
+instruction<16>|imm_sel<2>     |   15.352|
+instruction<16>|jalr           |   15.230|
+instruction<16>|jump           |   15.560|
+instruction<16>|mem_en         |   15.068|
+instruction<16>|mem_op<0>      |   17.217|
+instruction<16>|mem_op<1>      |   16.189|
+instruction<16>|mem_op<2>      |   16.060|
+instruction<16>|reg_write      |   14.945|
+instruction<16>|wb_sel<1>      |   16.532|
+instruction<17>|alu_op<1>      |   16.600|
+instruction<17>|alu_op<2>      |   14.696|
+instruction<17>|alu_src_a<0>   |   15.012|
+instruction<17>|alu_src_a<1>   |   15.549|
+instruction<17>|alu_src_b      |   14.953|
+instruction<17>|branch_en      |   14.921|
+instruction<17>|branch_op<0>   |   16.076|
+instruction<17>|branch_op<1>   |   16.179|
+instruction<17>|branch_op<2>   |   15.966|
+instruction<17>|ebreak         |   14.434|
+instruction<17>|ecall          |   14.164|
+instruction<17>|illegal_instr  |   14.628|
+instruction<17>|imm_sel<0>     |   15.722|
+instruction<17>|imm_sel<1>     |   14.675|
+instruction<17>|imm_sel<2>     |   15.139|
+instruction<17>|jalr           |   15.017|
+instruction<17>|jump           |   15.347|
+instruction<17>|mem_en         |   14.855|
+instruction<17>|mem_op<0>      |   17.004|
+instruction<17>|mem_op<1>      |   15.976|
+instruction<17>|mem_op<2>      |   15.847|
+instruction<17>|reg_write      |   14.732|
+instruction<17>|wb_sel<1>      |   16.319|
+instruction<18>|alu_op<1>      |   16.831|
+instruction<18>|alu_op<2>      |   14.927|
+instruction<18>|alu_src_a<0>   |   15.243|
+instruction<18>|alu_src_a<1>   |   15.780|
+instruction<18>|alu_src_b      |   15.184|
+instruction<18>|branch_en      |   15.152|
+instruction<18>|branch_op<0>   |   16.307|
+instruction<18>|branch_op<1>   |   16.410|
+instruction<18>|branch_op<2>   |   16.197|
+instruction<18>|ebreak         |   14.665|
+instruction<18>|ecall          |   14.395|
+instruction<18>|illegal_instr  |   14.859|
+instruction<18>|imm_sel<0>     |   15.953|
+instruction<18>|imm_sel<1>     |   14.906|
+instruction<18>|imm_sel<2>     |   15.370|
+instruction<18>|jalr           |   15.248|
+instruction<18>|jump           |   15.578|
+instruction<18>|mem_en         |   15.086|
+instruction<18>|mem_op<0>      |   17.235|
+instruction<18>|mem_op<1>      |   16.207|
+instruction<18>|mem_op<2>      |   16.078|
+instruction<18>|reg_write      |   14.963|
+instruction<18>|wb_sel<1>      |   16.550|
+instruction<19>|alu_op<1>      |   17.048|
+instruction<19>|alu_op<2>      |   15.144|
+instruction<19>|alu_src_a<0>   |   15.460|
+instruction<19>|alu_src_a<1>   |   15.997|
+instruction<19>|alu_src_b      |   15.401|
+instruction<19>|branch_en      |   15.369|
+instruction<19>|branch_op<0>   |   16.524|
+instruction<19>|branch_op<1>   |   16.627|
+instruction<19>|branch_op<2>   |   16.414|
+instruction<19>|ebreak         |   14.882|
+instruction<19>|ecall          |   14.612|
+instruction<19>|illegal_instr  |   15.076|
+instruction<19>|imm_sel<0>     |   16.170|
+instruction<19>|imm_sel<1>     |   15.123|
+instruction<19>|imm_sel<2>     |   15.587|
+instruction<19>|jalr           |   15.465|
+instruction<19>|jump           |   15.795|
+instruction<19>|mem_en         |   15.303|
+instruction<19>|mem_op<0>      |   17.452|
+instruction<19>|mem_op<1>      |   16.424|
+instruction<19>|mem_op<2>      |   16.295|
+instruction<19>|reg_write      |   15.180|
+instruction<19>|wb_sel<1>      |   16.767|
+instruction<20>|ebreak         |   12.149|
+instruction<20>|ecall          |   11.188|
+instruction<21>|alu_op<1>      |   17.352|
+instruction<21>|alu_op<2>      |   15.448|
+instruction<21>|alu_src_a<0>   |   15.764|
+instruction<21>|alu_src_a<1>   |   16.301|
+instruction<21>|alu_src_b      |   15.705|
+instruction<21>|branch_en      |   15.673|
+instruction<21>|branch_op<0>   |   16.828|
+instruction<21>|branch_op<1>   |   16.931|
+instruction<21>|branch_op<2>   |   16.718|
+instruction<21>|ebreak         |   15.186|
+instruction<21>|ecall          |   14.916|
+instruction<21>|illegal_instr  |   15.380|
+instruction<21>|imm_sel<0>     |   16.474|
+instruction<21>|imm_sel<1>     |   15.427|
+instruction<21>|imm_sel<2>     |   15.891|
+instruction<21>|jalr           |   15.769|
+instruction<21>|jump           |   16.099|
+instruction<21>|mem_en         |   15.607|
+instruction<21>|mem_op<0>      |   17.756|
+instruction<21>|mem_op<1>      |   16.728|
+instruction<21>|mem_op<2>      |   16.599|
+instruction<21>|reg_write      |   15.484|
+instruction<21>|wb_sel<1>      |   17.071|
+instruction<22>|alu_op<1>      |   17.316|
+instruction<22>|alu_op<2>      |   15.412|
+instruction<22>|alu_src_a<0>   |   15.728|
+instruction<22>|alu_src_a<1>   |   16.265|
+instruction<22>|alu_src_b      |   15.669|
+instruction<22>|branch_en      |   15.637|
+instruction<22>|branch_op<0>   |   16.792|
+instruction<22>|branch_op<1>   |   16.895|
+instruction<22>|branch_op<2>   |   16.682|
+instruction<22>|ebreak         |   15.150|
+instruction<22>|ecall          |   14.880|
+instruction<22>|illegal_instr  |   15.344|
+instruction<22>|imm_sel<0>     |   16.438|
+instruction<22>|imm_sel<1>     |   15.391|
+instruction<22>|imm_sel<2>     |   15.855|
+instruction<22>|jalr           |   15.733|
+instruction<22>|jump           |   16.063|
+instruction<22>|mem_en         |   15.571|
+instruction<22>|mem_op<0>      |   17.720|
+instruction<22>|mem_op<1>      |   16.692|
+instruction<22>|mem_op<2>      |   16.563|
+instruction<22>|reg_write      |   15.448|
+instruction<22>|wb_sel<1>      |   17.035|
+instruction<23>|alu_op<1>      |   17.606|
+instruction<23>|alu_op<2>      |   15.702|
+instruction<23>|alu_src_a<0>   |   16.018|
+instruction<23>|alu_src_a<1>   |   16.555|
+instruction<23>|alu_src_b      |   15.959|
+instruction<23>|branch_en      |   15.927|
+instruction<23>|branch_op<0>   |   17.082|
+instruction<23>|branch_op<1>   |   17.185|
+instruction<23>|branch_op<2>   |   16.972|
+instruction<23>|ebreak         |   15.440|
+instruction<23>|ecall          |   15.170|
+instruction<23>|illegal_instr  |   15.634|
+instruction<23>|imm_sel<0>     |   16.728|
+instruction<23>|imm_sel<1>     |   15.681|
+instruction<23>|imm_sel<2>     |   16.145|
+instruction<23>|jalr           |   16.023|
+instruction<23>|jump           |   16.353|
+instruction<23>|mem_en         |   15.861|
+instruction<23>|mem_op<0>      |   18.010|
+instruction<23>|mem_op<1>      |   16.982|
+instruction<23>|mem_op<2>      |   16.853|
+instruction<23>|reg_write      |   15.738|
+instruction<23>|wb_sel<1>      |   17.325|
+instruction<24>|alu_op<1>      |   17.016|
+instruction<24>|alu_op<2>      |   15.112|
+instruction<24>|alu_src_a<0>   |   15.428|
+instruction<24>|alu_src_a<1>   |   15.965|
+instruction<24>|alu_src_b      |   15.369|
+instruction<24>|branch_en      |   15.337|
+instruction<24>|branch_op<0>   |   16.492|
+instruction<24>|branch_op<1>   |   16.595|
+instruction<24>|branch_op<2>   |   16.382|
+instruction<24>|ebreak         |   14.850|
+instruction<24>|ecall          |   14.580|
+instruction<24>|illegal_instr  |   15.044|
+instruction<24>|imm_sel<0>     |   16.138|
+instruction<24>|imm_sel<1>     |   15.091|
+instruction<24>|imm_sel<2>     |   15.555|
+instruction<24>|jalr           |   15.433|
+instruction<24>|jump           |   15.763|
+instruction<24>|mem_en         |   15.271|
+instruction<24>|mem_op<0>      |   17.420|
+instruction<24>|mem_op<1>      |   16.392|
+instruction<24>|mem_op<2>      |   16.263|
+instruction<24>|reg_write      |   15.148|
+instruction<24>|wb_sel<1>      |   16.735|
+instruction<25>|alu_op<0>      |   13.947|
+instruction<25>|alu_op<1>      |   17.175|
+instruction<25>|alu_op<2>      |   15.271|
+instruction<25>|alu_op<3>      |   12.647|
+instruction<25>|alu_src_a<0>   |   15.587|
+instruction<25>|alu_src_a<1>   |   16.124|
+instruction<25>|alu_src_b      |   15.528|
+instruction<25>|branch_en      |   15.496|
+instruction<25>|branch_op<0>   |   16.651|
+instruction<25>|branch_op<1>   |   16.754|
+instruction<25>|branch_op<2>   |   16.541|
+instruction<25>|ebreak         |   15.009|
+instruction<25>|ecall          |   14.739|
+instruction<25>|illegal_instr  |   15.203|
+instruction<25>|imm_sel<0>     |   16.297|
+instruction<25>|imm_sel<1>     |   15.250|
+instruction<25>|imm_sel<2>     |   15.714|
+instruction<25>|jalr           |   15.592|
+instruction<25>|jump           |   15.922|
+instruction<25>|mem_en         |   15.430|
+instruction<25>|mem_op<0>      |   17.579|
+instruction<25>|mem_op<1>      |   16.551|
+instruction<25>|mem_op<2>      |   16.422|
+instruction<25>|reg_write      |   15.307|
+instruction<25>|wb_sel<0>      |   13.573|
+instruction<25>|wb_sel<1>      |   16.894|
+instruction<26>|alu_op<0>      |   13.860|
+instruction<26>|alu_op<1>      |   17.088|
+instruction<26>|alu_op<2>      |   15.184|
+instruction<26>|alu_op<3>      |   12.560|
+instruction<26>|alu_src_a<0>   |   15.500|
+instruction<26>|alu_src_a<1>   |   16.037|
+instruction<26>|alu_src_b      |   15.441|
+instruction<26>|branch_en      |   15.409|
+instruction<26>|branch_op<0>   |   16.564|
+instruction<26>|branch_op<1>   |   16.667|
+instruction<26>|branch_op<2>   |   16.454|
+instruction<26>|ebreak         |   14.922|
+instruction<26>|ecall          |   14.652|
+instruction<26>|illegal_instr  |   15.116|
+instruction<26>|imm_sel<0>     |   16.210|
+instruction<26>|imm_sel<1>     |   15.163|
+instruction<26>|imm_sel<2>     |   15.627|
+instruction<26>|jalr           |   15.505|
+instruction<26>|jump           |   15.835|
+instruction<26>|mem_en         |   15.343|
+instruction<26>|mem_op<0>      |   17.492|
+instruction<26>|mem_op<1>      |   16.464|
+instruction<26>|mem_op<2>      |   16.335|
+instruction<26>|reg_write      |   15.220|
+instruction<26>|wb_sel<0>      |   13.486|
+instruction<26>|wb_sel<1>      |   16.807|
+instruction<27>|alu_op<0>      |   13.693|
+instruction<27>|alu_op<1>      |   16.921|
+instruction<27>|alu_op<2>      |   15.017|
+instruction<27>|alu_op<3>      |   12.393|
+instruction<27>|alu_src_a<0>   |   15.333|
+instruction<27>|alu_src_a<1>   |   15.870|
+instruction<27>|alu_src_b      |   15.274|
+instruction<27>|branch_en      |   15.242|
+instruction<27>|branch_op<0>   |   16.397|
+instruction<27>|branch_op<1>   |   16.500|
+instruction<27>|branch_op<2>   |   16.287|
+instruction<27>|ebreak         |   14.755|
+instruction<27>|ecall          |   14.485|
+instruction<27>|illegal_instr  |   14.949|
+instruction<27>|imm_sel<0>     |   16.043|
+instruction<27>|imm_sel<1>     |   14.996|
+instruction<27>|imm_sel<2>     |   15.460|
+instruction<27>|jalr           |   15.338|
+instruction<27>|jump           |   15.668|
+instruction<27>|mem_en         |   15.176|
+instruction<27>|mem_op<0>      |   17.325|
+instruction<27>|mem_op<1>      |   16.297|
+instruction<27>|mem_op<2>      |   16.168|
+instruction<27>|reg_write      |   15.053|
+instruction<27>|wb_sel<0>      |   13.319|
+instruction<27>|wb_sel<1>      |   16.640|
+instruction<28>|alu_op<0>      |   13.910|
+instruction<28>|alu_op<1>      |   17.138|
+instruction<28>|alu_op<2>      |   15.234|
+instruction<28>|alu_op<3>      |   12.610|
+instruction<28>|alu_src_a<0>   |   15.550|
+instruction<28>|alu_src_a<1>   |   16.087|
+instruction<28>|alu_src_b      |   15.491|
+instruction<28>|branch_en      |   15.459|
+instruction<28>|branch_op<0>   |   16.614|
+instruction<28>|branch_op<1>   |   16.717|
+instruction<28>|branch_op<2>   |   16.504|
+instruction<28>|ebreak         |   14.972|
+instruction<28>|ecall          |   14.702|
+instruction<28>|illegal_instr  |   15.166|
+instruction<28>|imm_sel<0>     |   16.260|
+instruction<28>|imm_sel<1>     |   15.213|
+instruction<28>|imm_sel<2>     |   15.677|
+instruction<28>|jalr           |   15.555|
+instruction<28>|jump           |   15.885|
+instruction<28>|mem_en         |   15.393|
+instruction<28>|mem_op<0>      |   17.542|
+instruction<28>|mem_op<1>      |   16.514|
+instruction<28>|mem_op<2>      |   16.385|
+instruction<28>|reg_write      |   15.270|
+instruction<28>|wb_sel<0>      |   13.536|
+instruction<28>|wb_sel<1>      |   16.857|
+instruction<29>|alu_op<0>      |   13.843|
+instruction<29>|alu_op<1>      |   17.071|
+instruction<29>|alu_op<2>      |   15.167|
+instruction<29>|alu_op<3>      |   12.543|
+instruction<29>|alu_src_a<0>   |   15.483|
+instruction<29>|alu_src_a<1>   |   16.020|
+instruction<29>|alu_src_b      |   15.424|
+instruction<29>|branch_en      |   15.392|
+instruction<29>|branch_op<0>   |   16.547|
+instruction<29>|branch_op<1>   |   16.650|
+instruction<29>|branch_op<2>   |   16.437|
+instruction<29>|ebreak         |   14.905|
+instruction<29>|ecall          |   14.635|
+instruction<29>|illegal_instr  |   15.099|
+instruction<29>|imm_sel<0>     |   16.193|
+instruction<29>|imm_sel<1>     |   15.146|
+instruction<29>|imm_sel<2>     |   15.610|
+instruction<29>|jalr           |   15.488|
+instruction<29>|jump           |   15.818|
+instruction<29>|mem_en         |   15.326|
+instruction<29>|mem_op<0>      |   17.475|
+instruction<29>|mem_op<1>      |   16.447|
+instruction<29>|mem_op<2>      |   16.318|
+instruction<29>|reg_write      |   15.203|
+instruction<29>|wb_sel<0>      |   13.469|
+instruction<29>|wb_sel<1>      |   16.790|
+instruction<30>|alu_op<0>      |   12.616|
+instruction<30>|alu_op<1>      |   17.239|
+instruction<30>|alu_op<2>      |   15.335|
+instruction<30>|alu_op<3>      |   11.769|
+instruction<30>|alu_src_a<0>   |   15.651|
+instruction<30>|alu_src_a<1>   |   16.188|
+instruction<30>|alu_src_b      |   15.592|
+instruction<30>|branch_en      |   15.560|
+instruction<30>|branch_op<0>   |   16.715|
+instruction<30>|branch_op<1>   |   16.818|
+instruction<30>|branch_op<2>   |   16.605|
+instruction<30>|ebreak         |   15.073|
+instruction<30>|ecall          |   14.803|
+instruction<30>|illegal_instr  |   15.267|
+instruction<30>|imm_sel<0>     |   16.361|
+instruction<30>|imm_sel<1>     |   15.314|
+instruction<30>|imm_sel<2>     |   15.778|
+instruction<30>|jalr           |   15.656|
+instruction<30>|jump           |   15.986|
+instruction<30>|mem_en         |   15.494|
+instruction<30>|mem_op<0>      |   17.643|
+instruction<30>|mem_op<1>      |   16.615|
+instruction<30>|mem_op<2>      |   16.486|
+instruction<30>|reg_write      |   15.371|
+instruction<30>|wb_sel<0>      |   12.950|
+instruction<30>|wb_sel<1>      |   16.958|
+instruction<31>|alu_op<0>      |   13.477|
+instruction<31>|alu_op<1>      |   16.705|
+instruction<31>|alu_op<2>      |   14.801|
+instruction<31>|alu_op<3>      |   12.177|
+instruction<31>|alu_src_a<0>   |   15.117|
+instruction<31>|alu_src_a<1>   |   15.654|
+instruction<31>|alu_src_b      |   15.058|
+instruction<31>|branch_en      |   15.026|
+instruction<31>|branch_op<0>   |   16.181|
+instruction<31>|branch_op<1>   |   16.284|
+instruction<31>|branch_op<2>   |   16.071|
+instruction<31>|ebreak         |   14.539|
+instruction<31>|ecall          |   14.269|
+instruction<31>|illegal_instr  |   14.733|
+instruction<31>|imm_sel<0>     |   15.827|
+instruction<31>|imm_sel<1>     |   14.780|
+instruction<31>|imm_sel<2>     |   15.244|
+instruction<31>|jalr           |   15.122|
+instruction<31>|jump           |   15.452|
+instruction<31>|mem_en         |   14.960|
+instruction<31>|mem_op<0>      |   17.109|
+instruction<31>|mem_op<1>      |   16.081|
+instruction<31>|mem_op<2>      |   15.952|
+instruction<31>|reg_write      |   14.837|
+instruction<31>|wb_sel<0>      |   13.103|
+instruction<31>|wb_sel<1>      |   16.424|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Oct 21 17:40:03 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 382 MB
+
+
+
