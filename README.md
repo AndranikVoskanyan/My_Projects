@@ -8,7 +8,7 @@ Some projects were completed individually, others as group work during my studie
 
 | Area | Project | Folder |
 |---|---|---|
-| Digital design / FPGA | RISC-V processor in Verilog, tested on FPGA; AES-128 encryption in VHDL (design, simulation, implementation on FPGA board) | [`FPGA_projects`](FPGA_projects) |
+| Digital design / FPGA | RISC-V processor in Verilog, tested on FPGA; AES-128 encryption in VHDL, UART, CDC, Async FIFO and other  (design, simulation, implementation on FPGA board) | [`FPGA_projects`](FPGA_projects) |
 | Control / Robotics | Model predictive control (MPC) implemented from scratch for a highly flexible robotic manipulator | [`Handmade_MPC_for_highly_flexible_robotic_manipulator`](Handmade_MPC_for_highly_flexible_robotic_manipulator) |
 | Control | Inverted pendulum controller stabilising the upper equilibrium point | [`Inverted_pendulum`](Inverted_pendulum) |
 | System identification | Nonlinear system identification: multisine excitation, output measurement, best linear approximation with minimal error | [`Non_linear_system_identification`](Non_linear_system_identification) |
